@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Мейрбек Аширбаев](https://up.htmlacademy.ru/adaptive-individual/1/user/1543677).
-* Наставник: `Неизвестно`.
+- Студент: [Мейрбек Аширбаев](https://up.htmlacademy.ru/adaptive-individual/1/user/1543677).
+- Наставник: [Николай Колганов](https://github.com/Espanol-nikkol).
 
 ---
 
