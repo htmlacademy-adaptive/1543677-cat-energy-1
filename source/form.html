@@ -8,20 +8,24 @@
   <body class="page__body body-form">
     <header class="body-form__header header">
       <a class="header__logo-1 logo-1"
-        ><img src="img/logo-1.svg" alt="Логотип" width="33" height="38" /><img
+        ><img src="img/logo-1.svg" alt="Логотип" width="33" height="38" />
+        <img
           src="img/logo-1-tablet.svg"
           alt="Логотип"
           width="60"
           height="50"
-          hidden /><img
+          hidden
+        />
+        <img
           src="img/logo-1-desktop.svg"
           alt="Логотип"
           width="70"
           height="59"
           hidden
-      /></a>
+        />
+      </a>
       <div class="header__logo-2 logo-2">
-        <img src="img/logo-2.png" alt="CAT Energy" width="101" height="18" />
+        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
       </div>
       <nav class="header__nav main-nav">
         <input id="hamburger" class="main-nav__input" type="checkbox" />
@@ -50,7 +54,7 @@
         <fieldset class="form__about-cat about-cat">
           <ul class="about-cat__list">
             <li class="about-cat__item">
-              <label for="name" class="about-cat__control"> ИМЯ:* </label>
+              <label for="name" class="about-cat__control"> ИМЯ: </label>
               <input
                 class="about-cat__input"
                 type="text"
@@ -61,12 +65,12 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="massa" class="about-cat__control"> Вес (кг):* </label>
+              <label for="mass" class="about-cat__control"> Вес (кг): </label>
               <input
                 class="about-cat__input"
                 type="number"
-                name="massa"
-                id="massa"
+                name="mass"
+                id="mass"
                 placeholder="7"
                 min="0"
                 max="100"
@@ -97,8 +101,9 @@
                 <input
                   class="looks__input"
                   type="radio"
-                  name="slim"
+                  value="slim"
                   id="slim"
+                  name="diet"
                   checked
                 />
                 Похудение
@@ -109,8 +114,9 @@
                 <input
                   class="looks__input"
                   type="radio"
-                  name="mass-gain"
+                  value="mass-gain"
                   id="mass-gain"
+                  name="diet"
                 />
                 Набор массы
               </label>
@@ -120,8 +126,9 @@
                 <input
                   class="looks__input"
                   type="radio"
-                  name="dont-know"
+                  value="dont-know"
                   id="dont-know"
+                  name="diet"
                 />
                 Не знаю (Нужен ваш совет)
               </label>
@@ -134,7 +141,7 @@
           </legend>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <label for="email" class="contacts__control"> E-mail:* </label>
+              <label for="email" class="contacts__control"> E-mail: </label>
               <input
                 class="contacts__input"
                 type="email"
@@ -146,7 +153,7 @@
             </li>
             <li class="contacts__item">
               <label for="phone-num" class="contacts__control">
-                Телефон:*
+                Телефон:
               </label>
               <input
                 class="contacts__input"
@@ -161,16 +168,14 @@
         </fieldset>
         <fieldset class="form__comment comment">
           <legend class="comment__title">Комментарий</legend>
-          <p>
-            <textarea
-              class="comment__textarea"
-              rows="10"
-              cols="45"
-              name="comment__text"
-            >
+          <textarea
+            class="comment__textarea"
+            rows="10"
+            cols="45"
+            name="comment__text"
+          >
 Расскажите обо всех повaдках кота</textarea
-            >
-          </p>
+          >
         </fieldset>
         <fieldset class="form__extra extra">
           <legend class="extra__title">Дополнительно</legend>
@@ -178,9 +183,10 @@
             <li class="extra__item">
               <label for="sweetener" class="extra__control">
                 <input
+                  name="complementary-cat-food"
                   class="extra__input"
                   type="checkbox"
-                  name="sweetener"
+                  value="sweetener"
                   id="sweetener"
                   checked
                 />
@@ -190,9 +196,10 @@
             <li class="extra__item">
               <label for="drinking-water" class="extra__control">
                 <input
+                  name="complementary-cat-food"
                   class="extra__input"
                   type="checkbox"
-                  name="drinking-water"
+                  value="drinking-water"
                   id="drinking-water"
                   checked
                 />
@@ -202,9 +209,10 @@
             <li class="extra__item">
               <label for="milk" class="extra__control">
                 <input
+                  name="complementary-cat-food"
                   class="extra__input"
                   type="checkbox"
-                  name="milk"
+                  value="milk"
                   id="milk"
                 />
                 Молоко
@@ -213,9 +221,10 @@
             <li class="extra__item">
               <label for="vitamin" class="extra__control">
                 <input
+                  name="complementary-cat-food"
                   class="extra__input"
                   type="checkbox"
-                  name="vitamin"
+                  value="vitamin"
                   id="vitamin"
                 />
                 Витамины
@@ -226,7 +235,7 @@
         <button type="submit" class="form__button button">
           Отправить заявку
         </button>
-        <p class="form__text">* — Обязательные поля</p>
+        <p class="form__text">— Обязательные поля</p>
       </form>
       <section class="form-main__offer offer">
         <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
@@ -247,7 +256,7 @@
     </main>
     <footer class="body-form__footer footer">
       <div class="footer__logo-2 logo-2">
-        <img src="img/logo-2.png" alt="CAT Energy" width="101" height="18" />
+        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
       </div>
       <ul class="footer__social-link social-link">
         <li class="social-link__item">
