@@ -28,19 +28,23 @@
         <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
       </div>
       <nav class="header__nav main-nav">
-        <input id="hamburger" class="main-nav__input" type="checkbox" />
+        <input
+          id="hamburger"
+          class="main-nav__input visually-hidden"
+          type="checkbox"
+        />
         <label for="hamburger" class="main-nav__hamburger">
           <span class="visually-hidden">Кнопка гамбургер</span>
         </label>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Главная</a>
+            <a href="index.html" class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Подбор программы</a>
+            <a href="#" class="main-nav__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -65,7 +69,7 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="mass" class="about-cat__control"> Вес (кг): </label>
+              <label for="mass" class="about-cat__control"> Вес(кг): </label>
               <input
                 class="about-cat__input"
                 type="number"
@@ -99,46 +103,47 @@
             <li class="looks__item">
               <label for="slim" class="looks__control">
                 <input
-                  class="looks__input"
+                  class="looks__input visually-hidden"
                   type="radio"
                   value="slim"
                   id="slim"
                   name="diet"
                   checked
                 />
-                Похудение
+                <span class="looks__circle"></span>
+                <span>Похудение</span>
               </label>
             </li>
             <li class="looks__item">
               <label for="mass-gain" class="looks__control">
                 <input
-                  class="looks__input"
+                  class="looks__input visually-hidden"
                   type="radio"
                   value="mass-gain"
                   id="mass-gain"
                   name="diet"
                 />
-                Набор массы
+                <span class="looks__circle"></span>
+                <span>Набор массы</span>
               </label>
             </li>
             <li class="looks__item">
               <label for="dont-know" class="looks__control">
                 <input
-                  class="looks__input"
+                  class="looks__input visually-hidden"
                   type="radio"
                   value="dont-know"
                   id="dont-know"
                   name="diet"
                 />
-                Не знаю (Нужен ваш совет)
+                <span class="looks__circle"></span>
+                <span>Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__contacts contacts">
-          <legend class="contacts__title">
-            Контактные данные (владельца кота)
-          </legend>
+          <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
               <label for="email" class="contacts__control"> E-mail: </label>
@@ -167,67 +172,66 @@
           </ul>
         </fieldset>
         <fieldset class="form__comment comment">
-          <legend class="comment__title">Комментарий</legend>
-          <textarea
-            class="comment__textarea"
-            rows="10"
-            cols="45"
-            name="comment__text"
-          >
+          <h2 class="comment__title">Комментарий</h2>
+          <textarea class="comment__textarea" rows="10" name="comment__text">
 Расскажите обо всех повaдках кота</textarea
           >
         </fieldset>
         <fieldset class="form__extra extra">
-          <legend class="extra__title">Дополнительно</legend>
+          <h2 class="extra__title">Дополнительно</h2>
           <ul class="extra__list">
             <li class="extra__item">
               <label for="sweetener" class="extra__control">
                 <input
                   name="complementary-cat-food"
-                  class="extra__input"
+                  class="extra__input visually-hidden"
                   type="checkbox"
                   value="sweetener"
                   id="sweetener"
                   checked
                 />
-                Сахарозаменитель
+                <span class="extra__square"></span>
+                <span>Сахарозаменитель</span>
               </label>
             </li>
             <li class="extra__item">
               <label for="drinking-water" class="extra__control">
                 <input
                   name="complementary-cat-food"
-                  class="extra__input"
+                  class="extra__input visually-hidden"
                   type="checkbox"
                   value="drinking-water"
                   id="drinking-water"
                   checked
                 />
-                Питьевая вода
+                <span class="extra__square"></span>
+                <span>Питьевая вода</span>
               </label>
             </li>
             <li class="extra__item">
               <label for="milk" class="extra__control">
                 <input
                   name="complementary-cat-food"
-                  class="extra__input"
+                  class="extra__input visually-hidden"
                   type="checkbox"
                   value="milk"
                   id="milk"
                 />
-                Молоко
+                <span class="extra__square"></span>
+                <span>Молоко</span>
               </label>
             </li>
             <li class="extra__item">
               <label for="vitamin" class="extra__control">
                 <input
                   name="complementary-cat-food"
-                  class="extra__input"
+                  class="extra__input visually-hidden"
                   type="checkbox"
                   value="vitamin"
                   id="vitamin"
                 />
-                Витамины
+                <span class="extra__square"></span>
+                <span>Витамины</span>
               </label>
             </li>
           </ul>
@@ -238,11 +242,13 @@
         <p class="form__text">— Обязательные поля</p>
       </form>
       <section class="form-main__offer offer">
-        <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="offer__address">
-          <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="offer__loci">Санкт-Петербург</span>
-        </address>
+        <div class="offer__wrapper">
+          <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="offer__address">
+            <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="offer__loci">Санкт-Петербург</span>
+          </address>
+        </div>
         <div class="offer__map">
           <img
             class="offer__map-img"

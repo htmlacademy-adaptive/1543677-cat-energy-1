@@ -25,10 +25,20 @@
         />
       </a>
       <div class="header__logo-2 logo-2">
-        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
+        <img
+          class="logo-2__img"
+          src="img/logo-2.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <nav class="header__nav main-nav">
-        <input id="hamburger" class="main-nav__input" type="checkbox" />
+        <input
+          id="hamburger"
+          class="main-nav__input visually-hidden"
+          type="checkbox"
+        />
         <label for="hamburger" class="main-nav__hamburger">
           <span class="visually-hidden">Кнопка гамбургер</span>
         </label>
@@ -47,8 +57,11 @@
     </header>
     <main class="body__main main">
       <section class="main__hero hero">
-        <h1 class="hero__title">Функциональное питание для котов</h1>
-        <p class="hero__lead">Занялся собой? Займись котом!</p>
+        <div class="hero__texts">
+          <h1 class="hero__title">Функциональное питание для котов</h1>
+          <p class="hero__lead">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="hero__bg-img"></div>
         <img
           class="hero__img"
           src="img/hiro-photo-mobile.png"
@@ -56,7 +69,7 @@
           width="280"
           height="270"
         />
-        <a class="hero__button" href="#">Подобрать программу</a>
+        <a class="hero__button button" href="#">Подобрать программу</a>
       </section>
       <section class="main__services services">
         <ul class="services__list programs">
@@ -84,25 +97,25 @@
       <section class="main__features features">
         <h2 class="features__title">Как это работает</h2>
         <ul class="features__list">
-          <li class="features__item">
+          <li class="features__item features__item-img-1">
             <p class="features__text">
               Функциональное питание содержит только полезные питательные
               вещества.
             </p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item-img-2">
             <p class="features__text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item-img-3">
             <p class="features__text">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item-img-4">
             <p class="features__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
@@ -121,7 +134,7 @@
           <ul class="example__list">
             <li class="example__item">
               <span class="example__title">5 КГ</span>
-              <p class="example__description">Снижение веса</p>
+              <p class="example__description">Снижение<br />веса</p>
             </li>
             <li class="example__item">
               <span class="example__title">60 ДНЕЙ</span>
@@ -148,11 +161,13 @@
       </section>
 
       <section class="main__offer offer">
-        <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="offer__address">
-          <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="offer__loci">Санкт-Петербург</span>
-        </address>
+        <div class="offer__wrapper">
+          <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="offer__address">
+            <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="offer__loci">Санкт-Петербург</span>
+          </address>
+        </div>
         <div class="offer__map">
           <img
             class="offer__map-img"
@@ -166,7 +181,13 @@
     </main>
     <footer class="body__footer footer">
       <div class="footer__logo-2 logo-2">
-        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
+        <img
+          class="logo-2__img"
+          src="img/logo-2.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <ul class="footer__social-link social-link">
         <li class="social-link__item">

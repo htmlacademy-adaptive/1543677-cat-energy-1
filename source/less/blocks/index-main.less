@@ -1,0 +1,223 @@
+.main__hero {
+  margin-bottom: 20px;
+}
+
+.hero {
+  position: relative;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  &__title {
+    .font-mixin("Oswald", 400, normal, 36px, 36px);
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+  &__lead {
+    .font-mixin("Oswald", 400, normal, 14px, 14px);
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 29px;
+    text-transform: uppercase;
+  }
+  &__img {
+    display: block;
+    margin-bottom: 3px;
+  }
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    min-height: 302px;
+    background-image: url(../../img/index-bg-img-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: lighten(#68b738d9, 15%);
+      z-index: 2;
+    }
+  }
+}
+
+.main__services {
+  margin-bottom: 20px;
+}
+
+.services {
+  width: 280px;
+  .center-horizontal();
+}
+
+.programs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__item {
+    background-color: #f2f2f2;
+    padding: 30px 33px 18px 20px;
+  }
+  &__title {
+    .font-mixin("Oswald", 400, normal, 24px, 37px);
+    text-transform: uppercase;
+    margin-bottom: 29px;
+    text-align: center;
+  }
+  &__text {
+    color: #444444;
+    padding-bottom: 22.5px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 19.5px;
+  }
+  &__link {
+    text-decoration: none;
+    .font-mixin("Oswald", 400, normal, 16px, 16px);
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
+
+.main__features {
+  margin-bottom: 49px;
+}
+
+.features {
+  width: 280px;
+  .center-horizontal();
+  &__title {
+    .font-mixin("Oswald", 400, normal, 36px, 40px);
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__item {
+    width: 280px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    position: center left 0;
+    &-img-1 {
+      background-image: url(../../img/features-img-1.png);
+    }
+    &-img-2 {
+      background-image: url(../../img/features-img-2.png);
+    }
+    &-img-3 {
+      background-image: url(../../img/features-img-3.png);
+    }
+    &-img-4 {
+      background-image: url(../../img/features-img-4.png);
+    }
+  }
+  &__text {
+    width: 200px;
+    margin-left: auto;
+  }
+}
+
+.main__real-case {
+  margin-bottom: 26px;
+}
+
+.real-case {
+  width: 320px;
+  background-color: #eaeaea;
+  padding: 25px 20px 40px 20px;
+  &__title {
+    .font-mixin("Oswald", 400, normal, 36px, 40px);
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  &__text {
+    color: #444444;
+    margin-bottom: 20px;
+  }
+  &__example {
+    margin-bottom: 34px;
+  }
+  &__expenses {
+    margin-bottom: 20px;
+  }
+}
+
+.example {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    width: 124px;
+    min-height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+  }
+  &__title {
+    .font-mixin("Oswald", 400, normal, 24px, 24px);
+  }
+  &__description {
+    position: absolute;
+    width: 87px;
+    color: #444444;
+    text-align: center;
+    left: 18.5px;
+    bottom: -15px;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: #eaeaea;
+    text-transform: lowercase;
+  }
+}
+
+.expenses {
+  .font-mixin("Oswald", 400, normal, 14px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cat-transform {
+  display: flex;
+  &__image {
+    display: block;
+  }
+}
+
+.offer {
+  &__wrapper {
+    width: 280px;
+    .center-horizontal();
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+  &__title {
+    width: 140px;
+    .font-mixin("Oswald", 400, normal, 16px, 20px);
+  }
+  &__address {
+    width: 140px;
+    font-style: normal;
+    color: #444444;
+  }
+  &__map-img {
+    display: block;
+  }
+}

@@ -1,0 +1,72 @@
+.header {
+  width: 280px;
+  .font-mixin("Oswald", 400, normal, 16px, 20px);
+  .center-horizontal();
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-1 {
+  margin-right: 56px;
+}
+
+.logo-2__img {
+  display: block;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.main-nav {
+  position: relative;
+}
+
+.main-nav__hamburger {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../img/logo-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav__input:checked ~ .main-nav__hamburger {
+  background-image: url("../../img/logo-close-icon.svg");
+}
+
+.main-nav__list {
+  display: none;
+}
+
+.main-nav__input:checked ~ .main-nav__list {
+  position: absolute;
+  background-color: #ffffff;
+  top: 44px;
+  right: -20px;
+  width: 320px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.main-nav__item {
+  border-top: 1px solid #d9d9d9;
+}
+
+.main-nav__link {
+  display: block;
+  text-decoration: none;
+  width: 320px;
+  text-align: center;
+  padding-top: 22.5px;
+  padding-bottom: 23.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  .font-mixin("Oswald", 400, normal, 20px, 20px);
+  color: #000000;
+}

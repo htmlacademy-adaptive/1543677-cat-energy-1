@@ -1,0 +1,17 @@
+body {
+  .font-mixin("Lato", 400, normal, 14px, 18px);
+  background-color: @bg-color;
+}
+
+// index.html
+.page__body {
+  width: 320px;
+  .center-horizontal();
+}
+
+.body__header,
+.body-catalog__header,
+.body-form__header {
+  margin-bottom: 14px;
+  margin-top: 13px;
+}
