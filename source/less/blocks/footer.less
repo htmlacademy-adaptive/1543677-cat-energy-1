@@ -1,13 +1,14 @@
 .footer {
-  width: 320px;
   .center-horizontal();
-  background-color: #f2f2f2;
+
+  width: 320px;
+  background-color: @color-very_light-gray-2;
   padding: 40px 20px 40px 20px;
-  &__logo-2 {
+  &__logo-text {
     display: flex;
     justify-content: center;
     padding-bottom: 20.5px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @line-medium_light-gray;
   }
   &__social-link {
     width: 280px;
@@ -15,15 +16,10 @@
     padding-bottom: 20px;
     padding-left: 74px;
     padding-right: 74px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @line-medium_light-gray;
   }
   &__htmlacademy {
     padding-top: 20px;
-  }
-  &__text {
-    font-size: 16px;
-    line-height: 20px;
-    color: #444444;
   }
 }
 
@@ -38,4 +34,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__text {
+    .font-lato(16px, 20px);
+
+    color: @color-special_dark-gray;
+  }
 }

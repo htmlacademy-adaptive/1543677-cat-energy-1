@@ -7,25 +7,31 @@
   </head>
   <body class="page__body body-form">
     <header class="body-form__header header">
-      <a class="header__logo-1 logo-1"
-        ><img src="img/logo-1.svg" alt="Логотип" width="33" height="38" />
+      <a class="header__logo logo-1"
+        ><img src="img/logo.svg" alt="Логотип" width="33" height="38" />
         <img
-          src="img/logo-1-tablet.svg"
+          src="img/logo-tablet.svg"
           alt="Логотип"
           width="60"
           height="50"
           hidden
         />
         <img
-          src="img/logo-1-desktop.svg"
+          src="img/logo-desktop.svg"
           alt="Логотип"
           width="70"
           height="59"
           hidden
         />
       </a>
-      <div class="header__logo-2 logo-2">
-        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
+      <div class="header__logo-text logo-text">
+        <img
+          class="logo-text__img"
+          src="img/logo-text.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <nav class="header__nav main-nav">
         <input
@@ -50,7 +56,7 @@
       </nav>
     </header>
     <main class="body-form__main form-main">
-      <h1 class="form-main__title">Подбор программы</h1>
+      <h1 class="form-main__title heading-large-tight">Подбор программы</h1>
       <p class="form-main__lead">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
@@ -58,9 +64,11 @@
         <fieldset class="form__about-cat about-cat">
           <ul class="about-cat__list">
             <li class="about-cat__item">
-              <label for="name" class="about-cat__control"> ИМЯ: </label>
+              <label for="name" class="about-cat__control form-basic-text">
+                ИМЯ:
+              </label>
               <input
-                class="about-cat__input"
+                class="about-cat__input form-basic-text"
                 type="text"
                 name="name"
                 id="name"
@@ -69,9 +77,11 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="mass" class="about-cat__control"> Вес(кг): </label>
+              <label for="mass" class="about-cat__control form-basic-text">
+                Вес(кг):
+              </label>
               <input
-                class="about-cat__input"
+                class="about-cat__input form-basic-text"
                 type="number"
                 name="mass"
                 id="mass"
@@ -82,11 +92,11 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="age" class="about-cat__control">
+              <label for="age" class="about-cat__control form-basic-text">
                 Возраст (лет):
               </label>
               <input
-                class="about-cat__input"
+                class="about-cat__input form-basic-text"
                 type="number"
                 name="age"
                 id="age"
@@ -111,7 +121,7 @@
                   checked
                 />
                 <span class="looks__circle"></span>
-                <span>Похудение</span>
+                <span class="form-basic-text">Похудение</span>
               </label>
             </li>
             <li class="looks__item">
@@ -124,7 +134,7 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span>Набор массы</span>
+                <span class="form-basic-text">Набор массы</span>
               </label>
             </li>
             <li class="looks__item">
@@ -137,18 +147,22 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span>Не знаю (Нужен ваш совет)</span>
+                <span class="form-basic-text">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__contacts contacts">
-          <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+          <h2 class="contacts__title heading-medium-tight">
+            Контактные данные (владельца кота)
+          </h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <label for="email" class="contacts__control"> E-mail: </label>
+              <label for="email" class="contacts__control form-basic-text">
+                E-mail:
+              </label>
               <input
-                class="contacts__input"
+                class="contacts__input form-basic-text"
                 type="email"
                 name="email"
                 id="email"
@@ -157,11 +171,11 @@
               />
             </li>
             <li class="contacts__item">
-              <label for="phone-num" class="contacts__control">
+              <label for="phone-num" class="contacts__control form-basic-text">
                 Телефон:
               </label>
               <input
-                class="contacts__input"
+                class="contacts__input form-basic-text"
                 type="tel"
                 name="phone-num"
                 id="phone-num"
@@ -172,13 +186,17 @@
           </ul>
         </fieldset>
         <fieldset class="form__comment comment">
-          <h2 class="comment__title">Комментарий</h2>
-          <textarea class="comment__textarea" rows="10" name="comment__text">
+          <h2 class="comment__title heading-medium-tight">Комментарий</h2>
+          <textarea
+            class="comment__textarea form-basic-text"
+            rows="10"
+            name="comment__text"
+          >
 Расскажите обо всех повaдках кота</textarea
           >
         </fieldset>
         <fieldset class="form__extra extra">
-          <h2 class="extra__title">Дополнительно</h2>
+          <h2 class="extra__title heading-medium-tight">Дополнительно</h2>
           <ul class="extra__list">
             <li class="extra__item">
               <label for="sweetener" class="extra__control">
@@ -191,7 +209,7 @@
                   checked
                 />
                 <span class="extra__square"></span>
-                <span>Сахарозаменитель</span>
+                <span class="form-basic-text">Сахарозаменитель</span>
               </label>
             </li>
             <li class="extra__item">
@@ -205,7 +223,7 @@
                   checked
                 />
                 <span class="extra__square"></span>
-                <span>Питьевая вода</span>
+                <span class="form-basic-text">Питьевая вода</span>
               </label>
             </li>
             <li class="extra__item">
@@ -218,7 +236,7 @@
                   id="milk"
                 />
                 <span class="extra__square"></span>
-                <span>Молоко</span>
+                <span class="form-basic-text">Молоко</span>
               </label>
             </li>
             <li class="extra__item">
@@ -231,19 +249,21 @@
                   id="vitamin"
                 />
                 <span class="extra__square"></span>
-                <span>Витамины</span>
+                <span class="form-basic-text">Витамины</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit" class="form__button button">
+        <button type="submit" class="form__button button-primary">
           Отправить заявку
         </button>
         <p class="form__text">— Обязательные поля</p>
       </form>
       <section class="form-main__offer offer">
         <div class="offer__wrapper">
-          <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="offer__title heading-small">
+            Приглашаем к сотрудничеству дилеров!
+          </h2>
           <address class="offer__address">
             <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
             <span class="offer__loci">Санкт-Петербург</span>
@@ -261,8 +281,14 @@
       </section>
     </main>
     <footer class="body-form__footer footer">
-      <div class="footer__logo-2 logo-2">
-        <img src="img/logo-2.svg" alt="CAT Energy" width="101" height="18" />
+      <div class="footer__logo-text logo-text">
+        <img
+          class="logo-text__img"
+          src="img/logo-text.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <ul class="footer__social-link social-link">
         <li class="social-link__item">

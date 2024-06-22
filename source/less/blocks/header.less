@@ -1,16 +1,17 @@
 .header {
-  width: 280px;
-  .font-mixin("Oswald", 400, normal, 16px, 20px);
+  .font-oswald(16px, 20px);
   .center-horizontal();
+
+  width: 280px;
   display: flex;
   align-items: center;
 }
 
-.header__logo-1 {
+.header__logo {
   margin-right: 56px;
 }
 
-.logo-2__img {
+.logo-text__img {
   display: block;
 }
 
@@ -41,7 +42,7 @@
 
 .main-nav__input:checked ~ .main-nav__list {
   position: absolute;
-  background-color: #ffffff;
+  background-color: @color-white;
   top: 44px;
   right: -20px;
   width: 320px;
@@ -54,10 +55,12 @@
 }
 
 .main-nav__item {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid @line-medium_light-gray;
 }
 
 .main-nav__link {
+  .font-oswald(20px, 20px);
+
   display: block;
   text-decoration: none;
   width: 320px;
@@ -67,6 +70,5 @@
   padding-left: 20px;
   padding-right: 20px;
   text-transform: uppercase;
-  .font-mixin("Oswald", 400, normal, 20px, 20px);
-  color: #000000;
+  color: @color-black;
 }

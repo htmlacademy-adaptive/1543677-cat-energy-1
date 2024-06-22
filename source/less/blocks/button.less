@@ -1,12 +1,24 @@
-.button {
-  display: block;
-  width: 280px;
+.button-basic() {
   .center-horizontal();
-  .font-mixin("Oswald", 400, normal, 16px, 20px);
-  background-color: #68b738;
-  padding: 10px 44px 10px 44px;
+  .font-oswald(16px, 20px);
+
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   text-decoration: none;
-  text-align: center;
-  color: #ffffff;
   text-transform: uppercase;
+}
+
+.button-primary {
+  .button-basic();
+
+  background-color: @button-primary-color;
+  color: @color-white;
+}
+
+.button-secondary {
+  .button-basic();
+
+  background-color: @button-secondery-color;
+  color: @color-special_dark-gray;
 }
