@@ -71,10 +71,52 @@
     background-color: #f2f2f2;
     padding: 30px 33px 18px 20px;
   }
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+  &__icon-1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: @color-lime_green;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%; -50%);
+      width: 67px;
+      height: 55px;
+      background-image: url(../../img/cat-slim.png);
+      background-repeat: no-repeat;
+      background-position: center bottom 5px;
+    }
+  }
+  &__icon-2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: @color-lime_green;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%; -50%);
+      width: 67px;
+      height: 55px;
+      background-image: url(../../img/cat-slim-2.png);
+      background-repeat: no-repeat;
+      background-position: center bottom 10px;
+    }
+  }
   &__title {
     text-transform: uppercase;
-    margin-bottom: 29px;
-    text-align: center;
   }
   &__text {
     padding-bottom: 22.5px;
