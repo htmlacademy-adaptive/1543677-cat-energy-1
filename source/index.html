@@ -7,24 +7,38 @@
   </head>
   <body class="page__body body">
     <header class="body__header header">
-      <a class="header__logo-1 logo-1"
-        ><img src="img/logo-1.svg" alt="Логотип" width="33" height="38" /><img
-          src="img/logo-1-tablet.svg"
+      <a class="header__logo logo-1">
+        <img src="img/logo.svg" alt="Логотип" width="33" height="38" />
+        <img
+          src="img/logo-tablet.svg"
           alt="Логотип"
           width="60"
           height="50"
-          hidden /><img
-          src="img/logo-1-desktop.svg"
+          hidden
+        />
+        <img
+          src="img/logo-desktop.svg"
           alt="Логотип"
           width="70"
           height="59"
           hidden
-      /></a>
-      <div class="header__logo-2 logo-2">
-        <img src="img/logo-2.png" alt="CAT Energy" width="101" height="18" />
+        />
+      </a>
+      <div class="header__logo-text logo-text">
+        <img
+          class="logo-text__img"
+          src="img/logo-text.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <nav class="header__nav main-nav">
-        <input id="hamburger" class="main-nav__input" type="checkbox" />
+        <input
+          id="hamburger"
+          class="main-nav__input visually-hidden"
+          type="checkbox"
+        />
         <label for="hamburger" class="main-nav__hamburger">
           <span class="visually-hidden">Кнопка гамбургер</span>
         </label>
@@ -43,8 +57,13 @@
     </header>
     <main class="body__main main">
       <section class="main__hero hero">
-        <h1 class="hero__title">Функциональное питание для котов</h1>
-        <p class="hero__lead">Занялся собой? Займись котом!</p>
+        <div class="hero__texts">
+          <h1 class="hero__title heading-large-tight">
+            Функциональное питание для котов
+          </h1>
+          <p class="hero__lead">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="hero__bg-img"></div>
         <img
           class="hero__img"
           src="img/hiro-photo-mobile.png"
@@ -52,13 +71,16 @@
           width="280"
           height="270"
         />
-        <a class="hero__button" href="#">Подобрать программу</a>
+        <a class="hero__button button-primary" href="#">Подобрать программу</a>
       </section>
       <section class="main__services services">
         <ul class="services__list programs">
           <li class="programs__item">
-            <h2 class="programs__title">Похудение</h2>
-            <p class="programs__text">
+            <div class="programs__wrapper">
+              <div class="programs__icon-1"></div>
+              <h2 class="programs__title heading-medium-loose">Похудение</h2>
+            </div>
+            <p class="programs__text index-basic-text">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
@@ -68,38 +90,42 @@
             >
           </li>
           <li class="programs__item">
-            <h2 class="programs__title">Набор массы</h2>
-            <p class="programs__text">
+            <div class="programs__wrapper">
+              <div class="programs__icon-2"></div>
+              <h2 class="programs__title heading-medium-loose">Набор массы</h2>
+            </div>
+            <p class="programs__text index-basic-text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
+
             <a href="source/catalog.html" class="programs__link">каталог pro</a>
           </li>
         </ul>
       </section>
       <section class="main__features features">
-        <h2 class="features__title">Как это работает</h2>
+        <h2 class="features__title heading-large-loose">Как это работает</h2>
         <ul class="features__list">
-          <li class="features__item">
-            <p class="features__text">
+          <li class="features__item features__item-img-1">
+            <p class="features__text index-basic-text">
               Функциональное питание содержит только полезные питательные
               вещества.
             </p>
           </li>
-          <li class="features__item">
-            <p class="features__text">
+          <li class="features__item features__item-img-2">
+            <p class="features__text index-basic-text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
           </li>
-          <li class="features__item">
-            <p class="features__text">
+          <li class="features__item features__item-img-3">
+            <p class="features__text index-basic-text">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
           </li>
-          <li class="features__item">
-            <p class="features__text">
+          <li class="features__item features__item-img-4">
+            <p class="features__text index-basic-text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
             </p>
@@ -107,8 +133,8 @@
         </ul>
       </section>
       <section class="main__real-case real-case">
-        <h2 class="real-case__title">Живой пример</h2>
-        <p class="real-case__text">
+        <h2 class="real-case__title heading-large-loose">Живой пример</h2>
+        <p class="real-case__text index-basic-text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
           Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
           этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -117,7 +143,7 @@
           <ul class="example__list">
             <li class="example__item">
               <span class="example__title">5 КГ</span>
-              <p class="example__description">Снижение веса</p>
+              <p class="example__description">Снижение<br />веса</p>
             </li>
             <li class="example__item">
               <span class="example__title">60 ДНЕЙ</span>
@@ -144,11 +170,15 @@
       </section>
 
       <section class="main__offer offer">
-        <h2 class="offer__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="offer__address">
-          <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
-          <span class="offer__loci">Санкт-Петербург</span>
-        </address>
+        <div class="offer__wrapper">
+          <h2 class="offer__title heading-small">
+            Приглашаем к сотрудничеству дилеров!
+          </h2>
+          <address class="offer__address">
+            <span class="offer__loci">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="offer__loci">Санкт-Петербург</span>
+          </address>
+        </div>
         <div class="offer__map">
           <img
             class="offer__map-img"
@@ -161,8 +191,14 @@
       </section>
     </main>
     <footer class="body__footer footer">
-      <div class="footer__logo-2 logo-2">
-        <img src="img/logo-2.png" alt="CAT Energy" width="101" height="18" />
+      <div class="footer__logo-text logo-text">
+        <img
+          class="logo-text__img"
+          src="img/logo-text.svg"
+          alt="CAT Energy"
+          width="101"
+          height="18"
+        />
       </div>
       <ul class="footer__social-link social-link">
         <li class="social-link__item">

@@ -1,0 +1,24 @@
+.button-basic() {
+  .center-horizontal();
+  .font-oswald(16px, 20px);
+
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  .button-basic();
+
+  background-color: @button-primary-color;
+  color: @color-white;
+}
+
+.button-secondary {
+  .button-basic();
+
+  background-color: @button-secondery-color;
+  color: @color-special_dark-gray;
+}
