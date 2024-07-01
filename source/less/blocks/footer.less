@@ -4,11 +4,23 @@
   width: 320px;
   background-color: @color-very_light-gray-2;
   padding: 40px 20px 40px 20px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+  }
   &__logo-text {
     display: flex;
     justify-content: center;
     padding-bottom: 20.5px;
     border-bottom: 1px solid @line-medium_light-gray;
+    @media (min-width: @tablet-width) {
+      display: block;
+      padding: 0;
+      border: none;
+      margin-right: 160px;
+    }
   }
   &__social-link {
     width: 280px;
@@ -17,9 +29,18 @@
     padding-left: 74px;
     padding-right: 74px;
     border-bottom: 1px solid @line-medium_light-gray;
+    @media (min-width: @tablet-width) {
+      width: 132px;
+      padding: 0;
+      border: none;
+    }
   }
   &__htmlacademy {
     padding-top: 20px;
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      margin-left: auto;
+    }
   }
 }
 
@@ -27,13 +48,26 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  &__item a {
+    width: 28px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .htmlacademy {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__text {
     .font-lato(16px, 20px);
 

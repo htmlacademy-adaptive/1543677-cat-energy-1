@@ -3,6 +3,9 @@
   .center-horizontal();
 
   width: 320px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
 }
 
 .body__header,
@@ -10,4 +13,8 @@
 .body-form__header {
   margin-bottom: 14px;
   margin-top: 13px;
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 65px;
+  }
 }
