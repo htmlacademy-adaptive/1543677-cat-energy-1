@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
@@ -254,10 +255,12 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit" class="form__button button-primary">
-          Отправить заявку
-        </button>
-        <p class="form__text">— Обязательные поля</p>
+        <div class="form__wrapper">
+          <button type="submit" class="form__button button-primary">
+            Отправить заявку
+          </button>
+          <p class="form__text">— Обязательные поля</p>
+        </div>
       </form>
       <section class="form-main__offer offer">
         <div class="offer__wrapper">
@@ -270,13 +273,22 @@
           </address>
         </div>
         <div class="offer__map">
-          <img
-            class="offer__map-img"
-            src="img/location-mobile.png"
-            alt="адрес на карте"
-            width="320"
-            height="362"
-          />
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="img/location-tablet.png"
+              alt="адрес на карте"
+              width="768"
+              height="400"
+            />
+            <img
+              class="offer__map-img"
+              src="img/location-mobile.png"
+              alt="адрес на карте"
+              width="320"
+              height="362"
+            />
+          </picture>
         </div>
       </section>
     </main>
