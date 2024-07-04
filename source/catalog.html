@@ -332,44 +332,46 @@
       </section>
       <section class="catalog__additional additional">
         <h2 class="additional__title">Дополнительные товары</h2>
-        <ul class="additional__list">
-          <li class="additional__item add-info">
-            <h3 class="add-info__name">Сахарозаменитель</h3>
-            <div class="add-info__wrapper">
-              <span class="add-info__volume">1 упаковка (100 г)</span>
-              <span class="add-info__value">200 ₽</span>
-            </div>
-            <a class="add-info__button button-primary" href="#">Заказать</a>
-          </li>
-          <li class="additional__item add-info">
-            <h3 class="add-info__name">Питьевая вода</h3>
-            <div class="add-info__wrapper">
-              <span class="add-info__volume">5 литров</span>
-              <span class="add-info__value">50 ₽</span>
-            </div>
-            <a class="add-info__button button-primary" href="#">Заказать</a>
-          </li>
-          <li class="additional__item add-info">
-            <h3 class="add-info__name">Молоко</h3>
-            <div class="add-info__wrapper">
-              <span class="add-info__valume">1 литр</span>
-              <span class="add-info__value">100 ₽</span>
-            </div>
-            <a class="add-info__button button-primary" href="#">Заказать</a>
-          </li>
-          <li class="additional__item add-info">
-            <h3 class="add-info__name">Витамины</h3>
-            <div class="add-info__wrapper">
-              <span class="add-info__volume">1 упаковка (30 г)</span>
-              <span class="add-info__value">300 ₽</span>
-            </div>
-            <a class="add-info__button button-primary" href="#">заказать</a>
-          </li>
-        </ul>
-        <div class="additional__bonus bonus">
-          <p class="bonus__text">
-            Закажите все и получите чехол для кота в подарок!
-          </p>
+        <div class="additional__wrapper">
+          <ul class="additional__list">
+            <li class="additional__item add-info">
+              <h3 class="add-info__name">Сахарозаменитель</h3>
+              <div class="add-info__wrapper">
+                <span class="add-info__volume">1 упаковка (100 г)</span>
+                <span class="add-info__value">200 ₽</span>
+              </div>
+              <a class="add-info__button button-primary" href="#">Заказать</a>
+            </li>
+            <li class="additional__item add-info">
+              <h3 class="add-info__name">Питьевая вода</h3>
+              <div class="add-info__wrapper">
+                <span class="add-info__volume">5 литров</span>
+                <span class="add-info__value">50 ₽</span>
+              </div>
+              <a class="add-info__button button-primary" href="#">Заказать</a>
+            </li>
+            <li class="additional__item add-info">
+              <h3 class="add-info__name">Молоко</h3>
+              <div class="add-info__wrapper">
+                <span class="add-info__valume">1 литр</span>
+                <span class="add-info__value">100 ₽</span>
+              </div>
+              <a class="add-info__button button-primary" href="#">Заказать</a>
+            </li>
+            <li class="additional__item add-info">
+              <h3 class="add-info__name">Витамины</h3>
+              <div class="add-info__wrapper">
+                <span class="add-info__volume">1 упаковка (30 г)</span>
+                <span class="add-info__value">300 ₽</span>
+              </div>
+              <a class="add-info__button button-primary" href="#">заказать</a>
+            </li>
+          </ul>
+          <div class="additional__bonus bonus">
+            <p class="bonus__text">
+              Закажите все и получите чехол для кота в подарок!
+            </p>
+          </div>
         </div>
       </section>
 
@@ -385,6 +387,13 @@
         </div>
         <div class="offer__map">
           <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/location-desktop.png"
+              alt="адрес на карте"
+              width="1440"
+              height="400"
+            />
             <source
               media="(min-width: 768px)"
               srcset="img/location-tablet.png"

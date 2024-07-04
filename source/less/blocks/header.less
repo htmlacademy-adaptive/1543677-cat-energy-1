@@ -8,12 +8,21 @@
     width: 708px;
     min-height: 50px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    min-height: 59px;
+  }
 }
 
 .header__logo {
   margin-right: 56px;
   @media (min-width: @tablet-width) {
     margin-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
   }
 }
 
@@ -52,6 +61,9 @@
     display: flex;
     gap: 33px;
     padding-right: 4.5px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
   }
 }
 
@@ -93,5 +105,14 @@
     .font-oswald(18px, 24px);
     width: auto;
     padding: 0;
+  }
+  @media (min-width: @desktop-width) {
+    .font-oswald(20px, 30px);
+  }
+}
+
+.main-nav__link_color {
+  @media (min-width: @desktop-width) {
+    color: white;
   }
 }

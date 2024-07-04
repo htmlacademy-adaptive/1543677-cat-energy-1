@@ -10,6 +10,10 @@
     display: flex;
     align-items: center;
   }
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 66px 110px;
+  }
   &__logo-text {
     display: flex;
     justify-content: center;
@@ -20,6 +24,9 @@
       padding: 0;
       border: none;
       margin-right: 160px;
+    }
+    @media (min-width: @desktop-width) {
+      margin-right: 416px;
     }
   }
   &__social-link {

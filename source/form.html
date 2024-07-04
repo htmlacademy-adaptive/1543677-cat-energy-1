@@ -9,30 +9,38 @@
   <body class="page__body body-form">
     <header class="body-form__header header">
       <a class="header__logo logo-1"
-        ><img src="img/logo.svg" alt="Логотип" width="33" height="38" />
-        <img
-          src="img/logo-tablet.svg"
-          alt="Логотип"
-          width="60"
-          height="50"
-          hidden
-        />
-        <img
-          src="img/logo-desktop.svg"
-          alt="Логотип"
-          width="70"
-          height="59"
-          hidden
-        />
+        ><picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/logo-desktop.svg"
+            width="70"
+            height="59"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="img/logo-tablet.svg"
+            width="60"
+            height="50"
+          />
+          <img src="img/logo.svg" alt="Логотип" width="33" height="38" />
+        </picture>
       </a>
       <div class="header__logo-text logo-text">
-        <img
-          class="logo-text__img"
-          src="img/logo-text.svg"
-          alt="CAT Energy"
-          width="101"
-          height="18"
-        />
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/logo-text-desktop.svg"
+            width="118"
+            height="21"
+          />
+          <img
+            class="logo-text__img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
+          />
+        </picture>
       </div>
       <nav class="header__nav main-nav">
         <input
@@ -274,6 +282,13 @@
         </div>
         <div class="offer__map">
           <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/location-desktop.png"
+              alt="адрес на карте"
+              width="1440"
+              height="400"
+            />
             <source
               media="(min-width: 768px)"
               srcset="img/location-tablet.png"
