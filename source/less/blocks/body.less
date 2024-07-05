@@ -3,6 +3,12 @@
   .center-horizontal();
 
   width: 320px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .body__header,
@@ -10,4 +16,19 @@
 .body-form__header {
   margin-bottom: 14px;
   margin-top: 13px;
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 65px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
+    margin-bottom: 110px;
+  }
+}
+
+.body-catalog__header,
+.body-form__header {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 74px;
+  }
 }

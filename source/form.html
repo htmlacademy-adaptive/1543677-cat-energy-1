@@ -2,36 +2,45 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body body-form">
     <header class="body-form__header header">
       <a class="header__logo logo-1"
-        ><img src="img/logo.svg" alt="Логотип" width="33" height="38" />
-        <img
-          src="img/logo-tablet.svg"
-          alt="Логотип"
-          width="60"
-          height="50"
-          hidden
-        />
-        <img
-          src="img/logo-desktop.svg"
-          alt="Логотип"
-          width="70"
-          height="59"
-          hidden
-        />
+        ><picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/logo-desktop.svg"
+            width="70"
+            height="59"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="img/logo-tablet.svg"
+            width="60"
+            height="50"
+          />
+          <img src="img/logo.svg" alt="Логотип" width="33" height="38" />
+        </picture>
       </a>
       <div class="header__logo-text logo-text">
-        <img
-          class="logo-text__img"
-          src="img/logo-text.svg"
-          alt="CAT Energy"
-          width="101"
-          height="18"
-        />
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/logo-text-desktop.svg"
+            width="118"
+            height="21"
+          />
+          <img
+            class="logo-text__img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
+          />
+        </picture>
       </div>
       <nav class="header__nav main-nav">
         <input
@@ -254,10 +263,12 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit" class="form__button button-primary">
-          Отправить заявку
-        </button>
-        <p class="form__text">— Обязательные поля</p>
+        <div class="form__wrapper">
+          <button type="submit" class="form__button button-primary">
+            Отправить заявку
+          </button>
+          <p class="form__text">— Обязательные поля</p>
+        </div>
       </form>
       <section class="form-main__offer offer">
         <div class="offer__wrapper">
@@ -270,13 +281,29 @@
           </address>
         </div>
         <div class="offer__map">
-          <img
-            class="offer__map-img"
-            src="img/location-mobile.png"
-            alt="адрес на карте"
-            width="320"
-            height="362"
-          />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/location-desktop.png"
+              alt="адрес на карте"
+              width="1440"
+              height="400"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/location-tablet.png"
+              alt="адрес на карте"
+              width="768"
+              height="400"
+            />
+            <img
+              class="offer__map-img"
+              src="img/location-mobile.png"
+              alt="адрес на карте"
+              width="320"
+              height="362"
+            />
+          </picture>
         </div>
       </section>
     </main>

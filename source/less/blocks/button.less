@@ -1,5 +1,4 @@
 .button-basic() {
-  .center-horizontal();
   .font-oswald(16px, 20px);
 
   display: flex;
@@ -7,6 +6,11 @@
   padding: 10px;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald(20px, 26px);
+    padding: 14px 10px;
+  }
 }
 
 .button-primary {
