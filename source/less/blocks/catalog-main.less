@@ -2,30 +2,30 @@
   &__additional {
     margin-bottom: 35px;
     @media (min-width: @tablet-width) {
-      margin-bottom: 75px;
+      .center-horizontal();
+
+      margin-bottom: 70px;
     }
     @media (min-width: @desktop-width) {
-      margin-bottom: 87.5px;
+      margin-bottom: 87px;
     }
   }
   &__offer {
-    background-color: @color-very_light-gray-2;
-    padding-top: 26px;
-    @media (min-width: @desktop-width) {
-      padding-top: 0;
-    }
+    background-color: @basic_grey;
   }
   &__product {
     @media (min-width: @tablet-width) {
+      .center-horizontal();
       margin-bottom: 70px;
+    }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 81px;
     }
   }
 }
 
 .product {
   @media (min-width: @tablet-width) {
-    .center-horizontal();
-
     width: 708px;
   }
   @media (min-width: @desktop-width) {
@@ -34,9 +34,7 @@
   &__title {
     .heading-large-tight();
 
-    padding-top: 27.5px;
-    padding-bottom: 41px;
-    padding-left: 20px;
+    padding: 27px 20px 41px 20px;
     border-top: 1px solid @line-light-gray;
     @media (min-width: @tablet-width) {
       padding: 0;
@@ -51,12 +49,17 @@
       flex-wrap: wrap;
       gap: 60px;
     }
+    @media (min-width: @desktop-width) {
+      column-gap: 80px;
+      row-gap: 63px;
+    }
   }
   &__item {
     padding: 20px 20px 25px 20px;
     border-top: 1px solid @line-almost-white;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 20px;
     @media (min-width: @tablet-width) {
       width: 324px;
       flex-direction: column;
@@ -67,27 +70,27 @@
       background-image: url(../../img/catalog-bg-tablet.png);
       background-repeat: no-repeat;
       background-position: bottom;
+      row-gap: 0;
     }
     @media (min-width: @desktop-width) {
       width: 245px;
-      padding: 17px 38px 40px 38px;
+      padding: 10px 38px 40px 38px;
     }
   }
   &__img-frame {
     width: 140px;
-    min-height: 107px;
+    height: 107px;
     display: flex;
     justify-content: center;
     align-items: center;
     @media (min-width: @tablet-width) {
       width: 200px;
-      min-height: 210px;
+      height: 210px;
       margin-bottom: 22px;
     }
     @media (min-width: @desktop-width) {
       width: 172px;
-      min-height: 196px;
-      margin-bottom: 91.33px;
+      margin-bottom: 12px;
     }
   }
   &__img {
@@ -102,13 +105,15 @@
 
       width: 135px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 21px;
+    }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 24px;
     }
   }
   &__info {
-    margin-bottom: 21px;
     @media (min-width: @tablet-width) {
-      margin-bottom: 32.5px;
+      margin-bottom: 33px;
     }
   }
   &__wrapper {
@@ -140,6 +145,11 @@
     @media (min-width: @tablet-width) {
       padding-bottom: 5px;
       border-bottom: 1px solid @line-light-gray;
+      margin-bottom: 5px;
+    }
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      padding-bottom: 10.5px;
     }
   }
 }
@@ -227,8 +237,6 @@
 .additional {
   border-top: 1px solid #ebebeb;
   @media (min-width: @tablet-width) {
-    .center-horizontal();
-
     border-top: none;
     width: 708px;
   }
@@ -254,6 +262,7 @@
     }
     @media (min-width: @desktop-width) {
       padding: 0;
+      margin-bottom: 75px;
     }
     &::before {
       content: "";
@@ -263,7 +272,7 @@
       transform: translateY(-50%);
       width: 54px;
       height: 2px;
-      background-color: @color-lime_green;
+      background-color: @basic_green;
       @media (min-width: @tablet-width) {
         width: 320px;
         right: -29px;
@@ -296,10 +305,14 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 70px;
     }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
   }
   &__wrapper {
     @media (min-width: @desktop-width) {
       display: flex;
+      margin-bottom: 87px;
     }
   }
 }
@@ -319,7 +332,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 20px 40px;
-    gap: 20px;
+    gap: 25px;
   }
   @media (min-width: @desktop-width) {
     width: 895px;
@@ -394,7 +407,7 @@
   align-items: end;
   @media (min-width: @tablet-width) {
     width: 707px;
-    min-height: 200px;
+    height: 200px;
     background-image: url(../../img/catalog-bg-img-tablet.png);
     display: flex;
     align-items: center;

@@ -1,12 +1,10 @@
 .footer {
-  .center-horizontal();
-
   width: 320px;
-  background-color: @color-very_light-gray-2;
+  background-color: @basic_grey;
   padding: 40px 20px 40px 20px;
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding: 50px 30px;
+    padding: 55px 30px;
     display: flex;
     align-items: center;
   }
@@ -63,6 +61,19 @@
     justify-content: center;
     align-items: center;
   }
+
+  &__icon {
+    transition: fill 0.5s ease-out;
+
+    &:hover,
+    &:focus-visible {
+      fill: @basic_green;
+    }
+
+    &:active {
+      fill: fade(@basic_green, 30%);
+    }
+  }
 }
 
 .htmlacademy {
@@ -79,5 +90,17 @@
     .font-lato(16px, 20px);
 
     color: @color-special_dark-gray;
+  }
+  &__icon {
+    transition: fill 0.5s ease-out;
+
+    &:hover,
+    &:focus {
+      fill: @basic_green;
+    }
+
+    &:active {
+      fill: fade(@basic_green, 30%);
+    }
   }
 }
