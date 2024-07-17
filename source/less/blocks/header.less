@@ -126,21 +126,28 @@
   text-transform: uppercase;
   color: @color-black;
   position: relative;
-  &:hover {
-    color: fade(@color-black, 60%);
-  }
-  &:focus {
-    color: fade(@color-black, 30%);
-  }
-  &:active::before {
+  transition: color 0.5s ease-in;
+  &::before {
     content: "";
     position: absolute;
     height: 2px;
     left: 0;
     right: 0;
     bottom: 2px;
-
+    background-color: transparent;
+    transition: background-color 0.5s ease-in;
+  }
+  &:active::before {
     background-color: @basic_green;
+  }
+  &:hover {
+    color: fade(@color-black, 60%);
+  }
+  &:hover::before {
+    background-color: @basic_green;
+  }
+  &:focus {
+    color: fade(@color-black, 30%);
   }
 
   @media (min-width: @tablet-width) {
@@ -164,12 +171,9 @@
       color: fade(@color-white, 30%);
     }
     &:active::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      left: 0;
-      right: 0;
-      bottom: 2px;
+      background-color: @color-white;
+    }
+    &:hover::before {
       background-color: @color-white;
     }
   }
@@ -178,12 +182,6 @@
 .nav-link-active {
   @media (min-width: @tablet-width) {
     &::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      left: 0;
-      right: 0;
-      bottom: 2px;
       background-color: @basic_green;
     }
   }
@@ -192,12 +190,6 @@
 .main-nav__link--color.nav-link-active {
   @media (min-width: @desktop-width) {
     &::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      left: 0;
-      right: 0;
-      bottom: 2px;
       background-color: @color-white;
     }
   }
