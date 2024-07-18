@@ -2,6 +2,9 @@
 .page__body {
   .center-horizontal();
 
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 320px;
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -21,4 +24,10 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 36px;
   }
+}
+
+.body__main,
+.body-catalog__main,
+.body-form__main {
+  flex-grow: 1;
 }

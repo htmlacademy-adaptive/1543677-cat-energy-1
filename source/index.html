@@ -85,19 +85,26 @@
           <picture>
             <source
               media="(min-width: 1440px)"
-              srcset="img/hiro-photo-desktop.png"
+              srcset="
+                img/hiro-photo-desktop.png    1x,
+                img/hiro-photo-desktop@2x.png 2x
+              "
               width="552"
               height="499"
             />
             <source
               media="(min-width: 768px)"
-              srcset="img/hiro-photo-tablet.png"
+              srcset="
+                img/hiro-photo-tablet.png    1x,
+                img/hiro-photo-tablet@2x.png 2x
+              "
               width="709"
               height="609"
             />
             <img
               class="hero__img"
               src="img/hiro-photo-mobile.png"
+              srcset="img/hiro-photo-mobile@2x.png 2x"
               alt="Ресунок продукта"
               width="280"
               height="270"
@@ -211,25 +218,34 @@
             <source
               class="cat-transform__image"
               media="(min-width: 768px)"
-              srcset="img/cat-trans-t-b.png"
+              srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
+              width="280"
+              height="512"
             />
             <img
               class="cat-transform__image"
               src="img/cat-trans-m-b.png"
+              srcset="img/cat-trans-m-b@2x.png 2x"
               alt="Жырный кот"
+              width="140"
+              height="256"
             />
           </picture>
           <picture>
             <source
               class="cat-transform__image"
               media="(min-width: 768px)"
-              srcset="img/cat-trans-t-s.png"
-              z-index="1"
+              srcset="img/cat-trans-t-s.png 1x, img/cat-trans-t-s@2x.png 2x"
+              width="280"
+              height="512"
             />
             <img
               class="cat-transform__image"
               src="img/cat-trans-m-s.png"
+              srcset="img/cat-trans-m-s@2x.png 2x"
               alt="Нормальный кот"
+              width="140"
+              height="256"
             />
           </picture>
         </div>

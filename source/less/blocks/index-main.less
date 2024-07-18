@@ -80,6 +80,10 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/index-bg-img-1@2x.png);
+      background-size: 320px auto;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -98,10 +102,14 @@
       position: absolute;
       width: 720px;
       min-height: 694px;
-      background-image: url(../../img/index-background-desktop-1.png);
+      background-image: url("../../img/index-background-desktop-1.png");
       background-color: @color-black;
       top: -254px;
       left: 610px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/index-background-desktop-1@2x.png");
+        background-size: 720px auto;
+      }
     }
   }
   &__button {
@@ -202,14 +210,13 @@
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%; -50%);
-      width: 67px;
-      height: 55px;
-      background-image: url(../../img/cat-slim.png);
+      bottom: 5px;
+      left: 5px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../../img/cat-slim.svg");
       background-repeat: no-repeat;
-      background-position: center bottom 5px;
+      background-position: center;
     }
     @media (min-width: @tablet-width) {
       position: absolute;
@@ -219,10 +226,11 @@
       height: 200px;
       &::before {
         content: "";
+        bottom: 17px;
+        left: 30px;
         width: 140px;
-        height: 220px;
-        background-image: url(../../img/cat-slim-tablet.png);
-        background-position: center bottom 25px;
+        height: 194px;
+        background-size: 140px 194px;
       }
     }
     @media (min-width: @desktop-width) {
@@ -231,10 +239,11 @@
       height: 100px;
       &::before {
         content: "";
-        width: 73px;
-        height: 117px;
-        background-image: url(../../img/cat-slim-desktop.png);
-        background-position: center bottom 17px;
+        bottom: 9px;
+        left: 15px;
+        width: 70px;
+        height: 97px;
+        background-size: 70px 97px;
       }
     }
   }
@@ -247,14 +256,14 @@
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%; -50%);
+      left: -9px;
+      bottom: 11px;
       width: 67px;
-      height: 55px;
-      background-image: url(../../img/cat-slim-2.png);
+      height: 29px;
+      background-image: url(../../img/cat-slim-2.svg);
       background-repeat: no-repeat;
-      background-position: center bottom 10px;
+      background-position: center;
+      background-size: 67px 29px;
     }
     @media (min-width: @tablet-width) {
       position: absolute;
@@ -264,10 +273,11 @@
       height: 200px;
       &::before {
         content: "";
+        left: -34px;
+        bottom: 44px;
         width: 268px;
-        height: 113px;
-        background-image: url(../../img/cat-slim-tablet-2.png);
-        background-position: center bottom 0px;
+        height: 112px;
+        background-size: 268px 112px;
       }
     }
     @media (min-width: @desktop-width) {
@@ -276,10 +286,11 @@
       height: 100px;
       &::before {
         content: "";
-        width: 140px;
-        height: 57px;
-        background-image: url(../../img/cat-slim-desktop-2.png);
-        background-position: right 5px bottom;
+        left: -17px;
+        bottom: 22px;
+        width: 134px;
+        height: 56px;
+        background-size: 134px 56px;
       }
     }
   }
