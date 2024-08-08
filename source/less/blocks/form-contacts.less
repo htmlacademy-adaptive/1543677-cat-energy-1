@@ -1,0 +1,137 @@
+.contacts {
+  border: none;
+  width: 280px;
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+
+  &__title {
+    position: relative;
+    width: 187px;
+    margin-bottom: 35px;
+    text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      width: 517px;
+      margin-bottom: 76px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      right: -112px;
+      width: 93px;
+      height: 2px;
+      background-color: #68b738;
+
+      @media (min-width: @tablet-width) {
+        width: 146px;
+        top: 19px;
+        right: -181px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 718px;
+        right: -812px;
+      }
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: -70px;
+        width: 30px;
+        height: 2px;
+        background-color: @basic_green;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 70px;
+        left: -110px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style: none;
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      gap: 16px;
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1220px;
+      flex-direction: row;
+      gap: 80px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      width: 570px;
+    }
+  }
+
+  &__control {
+    flex-shrink: 0;
+
+    &::after {
+      content: "*";
+    }
+  }
+
+  &__input {
+    padding: 14px 15px 12px 14px;
+    color: @special_grey-2;
+    border: 1px solid @special_grey;
+    outline: none;
+    flex-grow: 1;
+    transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+    &:hover {
+      color: @color-special_dark-gray;
+      border-color: @special_grey-2;
+
+      & ~ .contacts__input-icon {
+        stroke: @basic_green;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 16px;
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: stroke 0.5s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      right: 14px;
+    }
+  }
+}

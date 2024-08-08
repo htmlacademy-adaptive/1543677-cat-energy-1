@@ -2,31 +2,37 @@
   width: 320px;
   background-color: @basic_grey;
   padding: 40px 20px 40px 20px;
+
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding: 55px 30px;
+    padding: 57px 30px;
     display: flex;
     align-items: center;
   }
+
   @media (min-width: @desktop-width) {
     width: 1440px;
     padding: 66px 110px;
   }
+
   &__logo-text {
     display: flex;
     justify-content: center;
     padding-bottom: 20.5px;
     border-bottom: 1px solid @line-medium_light-gray;
+
     @media (min-width: @tablet-width) {
       display: block;
       padding: 0;
       border: none;
       margin-right: 160px;
     }
+
     @media (min-width: @desktop-width) {
       margin-right: 416px;
     }
   }
+
   &__social-link {
     width: 280px;
     padding-top: 20px;
@@ -34,14 +40,17 @@
     padding-left: 74px;
     padding-right: 74px;
     border-bottom: 1px solid @line-medium_light-gray;
+
     @media (min-width: @tablet-width) {
       width: 132px;
       padding: 0;
       border: none;
     }
   }
+
   &__htmlacademy {
     padding-top: 20px;
+
     @media (min-width: @tablet-width) {
       padding: 0;
       margin-left: auto;
@@ -54,6 +63,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__item a {
     width: 28px;
     height: 22px;
@@ -81,21 +91,29 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+
   @media (min-width: @tablet-width) {
     width: 168px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &__text {
     .font-lato(16px, 20px);
 
     color: @color-special_dark-gray;
     transition: color 0.5s ease-out;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 5px;
+    }
   }
+
   &__icon {
     transition: fill 0.5s ease-out;
   }
+
   &:hover {
     .htmlacademy-link__icon {
       fill: @basic_green;
@@ -106,8 +124,7 @@
     .htmlacademy-link__icon {
       fill: fade(@basic_green, 30%);
     }
-  }
-  &:active {
+
     .htmlacademy-link__text {
       color: fade(@color-special_dark-gray, 30%);
     }

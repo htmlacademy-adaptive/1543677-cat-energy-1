@@ -1,0 +1,137 @@
+.extra {
+  border: none;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 34px;
+    text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 57px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      right: -19px;
+      width: 139px;
+      height: 2px;
+      background-color: @basic_green;
+
+      @media (min-width: @tablet-width) {
+        width: 446px;
+        top: 19px;
+        right: -70px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 1078px;
+        right: -110px;
+      }
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: -70px;
+        width: 30px;
+        height: 2px;
+        background-color: @basic_green;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 70px;
+        left: -110px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 123px;
+      row-gap: 32px;
+    }
+
+    @media (min-width: @desktop-width) {
+      gap: 104px;
+    }
+  }
+
+  &__item {
+    @media (min-width: @tablet-width) {
+      width: 221px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @media (min-width: @tablet-width) {
+      gap: 20px;
+    }
+  }
+
+  &__square {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @special_grey;
+    transition: border-color 0.5s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__input:checked ~ .extra__square::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/form-checked-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      background-image: url("../../img/form-checked-icon-tablet.svg");
+    }
+  }
+
+  &__input:hover ~ .extra__square {
+    border-color: @special_grey-2;
+  }
+
+  &__input:disabled ~ .extra__square,
+  &__input:disabled ~ .form-basic-text {
+    opacity: 0.3;
+    border-color: @special_grey-2;
+  }
+}
