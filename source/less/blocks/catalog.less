@@ -1,0 +1,30 @@
+.catalog {
+  &__additional {
+    margin-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      .center-horizontal();
+
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 87px;
+    }
+  }
+
+  &__offer {
+    background-color: @basic_grey;
+  }
+
+  &__product {
+    @media (min-width: @tablet-width) {
+      .center-horizontal();
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 81px;
+    }
+  }
+}

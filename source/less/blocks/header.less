@@ -2,16 +2,16 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 13px 20px 14px 20px;
+  padding: 13px 20px 12px 20px;
 
   @media (min-width: @tablet-width) {
     min-height: 50px;
-    padding: 25px 30px 65px 30px;
+    padding: 25px 30px 60px 30px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 59px;
-    padding: 55px 110px 74px 110px;
+    padding: 55px 110px 70px 110px;
   }
 
   & .logo-text__img {
@@ -23,6 +23,7 @@
 
 .header__logo {
   margin-right: 56px;
+
   @media (min-width: @tablet-width) {
     margin-right: 13px;
   }
@@ -35,12 +36,15 @@
 .logo-image,
 .logo-text__img {
   transition: opacity 0.5s ease-in-out;
+
   &:hover {
     opacity: 0.8;
   }
+
   &:focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.6;
   }
@@ -62,10 +66,10 @@
   display: block;
   width: 24px;
   height: 38px;
-
   background-image: url("../../img/logo-hamburger.svg");
   background-repeat: no-repeat;
   background-position: center;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -77,12 +81,14 @@
 
 .main-nav__list {
   display: none;
+
   @media (min-width: @tablet-width) {
     list-style: none;
     display: flex;
     gap: 33px;
     padding-right: 4.5px;
   }
+
   @media (min-width: @desktop-width) {
     padding-right: 0;
   }
@@ -106,6 +112,7 @@
   border-top: 1px solid @line-medium_light-gray;
   width: 320px;
   text-align: center;
+
   @media (min-width: @tablet-width) {
     width: auto;
     border: none;
@@ -127,25 +134,30 @@
   color: @color-black;
   position: relative;
   transition: color 0.5s ease-in;
+
   &::before {
     content: "";
     position: absolute;
     height: 2px;
     left: 0;
     right: 0;
-    bottom: 2px;
+    bottom: 5px;
     background-color: transparent;
     transition: background-color 0.5s ease-in;
   }
+
   &:active::before {
     background-color: @basic_green;
   }
+
   &:hover {
     color: fade(@color-black, 60%);
   }
+
   &:hover::before {
     background-color: @basic_green;
   }
+
   &:focus {
     color: fade(@color-black, 30%);
   }
@@ -155,6 +167,7 @@
     width: auto;
     padding: 14px 0 12px 0;
   }
+
   @media (min-width: @desktop-width) {
     .font-oswald(20px, 30px);
     padding: 16px 0 13px 0;
@@ -164,15 +177,19 @@
 .main-nav__link--color {
   @media (min-width: @desktop-width) {
     color: @color-white;
+
     &:hover {
       color: fade(@color-white, 60%);
     }
+
     &:focus {
       color: fade(@color-white, 30%);
     }
+
     &:active::before {
       background-color: @color-white;
     }
+
     &:hover::before {
       background-color: @color-white;
     }
