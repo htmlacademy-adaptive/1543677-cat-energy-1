@@ -185,11 +185,20 @@
             </p>
             <a class="programs__link" href="source/catalog.html">
               <span class="programs__link-text">Каталог slim</span>
-              <img
-                class="programs__link-icon"
-                src="img/icon-arrow.png"
-                alt="иконка стрелы"
-              />
+              <picture>
+                <source
+                  class="programs__link-icon"
+                  type="image/webp"
+                  srcset="img/icon-arrow.webp 1x, img/icon-arrow@2x.webp 2x"
+                />
+
+                <img
+                  class="programs__link-icon"
+                  src="img/icon-arrow.png"
+                  srcset="img/icon-arrow@2x.png 2x"
+                  alt="иконка стрелы"
+                />
+              </picture>
             </a>
           </li>
           <li class="programs__item">
@@ -203,11 +212,20 @@
             </p>
             <a class="programs__link" href="catalog.html">
               <span class="programs__link-text">каталог pro</span>
-              <img
-                class="programs__link-icon"
-                src="img/icon-arrow.png"
-                alt="иконка стрелы"
-              />
+              <picture>
+                <source
+                  class="programs__link-icon"
+                  type="image/webp"
+                  srcset="img/icon-arrow.webp 1x, img/icon-arrow@2x.webp 2x"
+                />
+
+                <img
+                  class="programs__link-icon"
+                  src="img/icon-arrow.png"
+                  srcset="img/icon-arrow@2x.png 2x"
+                  alt="иконка стрелы"
+                />
+              </picture>
             </a>
           </li>
         </ul>
@@ -271,6 +289,23 @@
           <picture>
             <source
               class="cat-transform__image"
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/cat-trans-t-b.webp 1x, img/cat-trans-t-b@2x.webp 2x"
+              width="280"
+              height="512"
+            />
+            <source
+              class="cat-transform__image"
+              type="image/webp"
+              srcset="img/cat-trans-m-b.webp 1x, img/cat-trans-m-b@2x.webp 2x"
+              alt="Жырный кот"
+              width="140"
+              height="256"
+            />
+
+            <source
+              class="cat-transform__image"
               media="(min-width: 768px)"
               srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
               width="280"
@@ -293,6 +328,23 @@
             </button>
           </div>
           <picture>
+            <source
+              class="cat-transform__image"
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/cat-trans-t-s.webp 1x, img/cat-trans-t-s@2x.webp 2x"
+              width="280"
+              height="512"
+            />
+            <source
+              class="cat-transform__image"
+              type="image/webp"
+              srcset="img/cat-trans-m-s.webp 1x, img/cat-trans-m-s@2x.webp 2x"
+              alt="Нормальный кот"
+              width="140"
+              height="256"
+            />
+
             <source
               class="cat-transform__image"
               media="(min-width: 768px)"

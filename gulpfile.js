@@ -128,21 +128,23 @@ const reload = (done) => {
 
 // Watcher
 
-// const watcher = () => {
-//   gulp.watch('source/less/**/*.less', gulp.series(styles));
-//   gulp.watch('source/*.html').on('change', browser.reload);
-// }
-
 const watcher = () => {
   gulp.watch('source/less/**/*.les', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
+// Copy Manifest
+const copyManifest = () => {
+  return gulp.src('source/manifest.webmanifest')
+    .pipe(gulp.dest('build'));
+}
+
 // Build
 export const build = gulp.series(
   clean,
   copy,
+  copyManifest,
   optimizeImages,
   gulp.parallel(
     styles,
@@ -157,6 +159,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
+  copyManifest,
   copyImages,
   gulp.parallel(
     styles,
