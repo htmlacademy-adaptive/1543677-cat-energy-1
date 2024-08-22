@@ -37,6 +37,7 @@
       @media (min-width: @desktop-width) {
         width: 1078px;
         right: -110px;
+        top: 21px;
       }
     }
 
@@ -54,6 +55,7 @@
       @media (min-width: @desktop-width) {
         width: 70px;
         left: -110px;
+        top: 21px;
       }
     }
   }
@@ -72,7 +74,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      gap: 104px;
+      display: grid;
+      grid-template-columns: repeat(3, 325px) 245px;
+      gap: 10px 0;
     }
   }
 
