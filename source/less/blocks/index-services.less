@@ -1,0 +1,251 @@
+.main__services {
+  .center-horizontal();
+
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.services {
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.programs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  &__item {
+    background-color: @basic_grey;
+    padding: 24px 33px 18px 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 77px 53px 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 47px 61px 59px 52px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      position: relative;
+      gap: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: static;
+      gap: 62px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover .programs__link-icon {
+      margin-left: 0;
+    }
+
+    &:active .programs__link-icon {
+      margin-left: 0;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__icon-1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: @basic_green;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../../img/cat-slim.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      width: 200px;
+      height: 200px;
+
+      &::before {
+        content: "";
+        bottom: 17px;
+        left: 30px;
+        width: 140px;
+        height: 194px;
+        background-size: 140px 194px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+
+      &::before {
+        content: "";
+        bottom: 9px;
+        left: 15px;
+        width: 70px;
+        height: 97px;
+        background-size: 70px 97px;
+      }
+    }
+  }
+
+  &__icon-2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: @basic_green;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      bottom: 11px;
+      width: 67px;
+      height: 29px;
+      background-image: url("../../img/cat-slim-2.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 67px 29px;
+    }
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      width: 200px;
+      height: 200px;
+
+      &::before {
+        content: "";
+        left: -34px;
+        bottom: 44px;
+        width: 268px;
+        height: 112px;
+        background-size: 268px 112px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      right: 0;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+
+      &::before {
+        content: "";
+        left: -17px;
+        bottom: 22px;
+        width: 134px;
+        height: 56px;
+        background-size: 134px 56px;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    padding-bottom: 23px;
+    border-bottom: 1px solid @line-medium_light-gray;
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      border-bottom: none;
+      padding: 0;
+      width: 340px;
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 457px;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__link-text {
+    .font-oswald(16px, 16px);
+    color: @color-black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 15px;
+    background-color: #f2f2f2;
+    position: relative;
+    z-index: 3;
+
+    @media (min-width: @tablet-width) {
+      .font-oswald(20px, 30px);
+
+      padding-right: 25px;
+    }
+  }
+
+  &__link-icon {
+    transition: margin-left 0.5s ease-in-out;
+    margin-left: -4px;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,130 @@
+.main__features {
+  .center-horizontal();
+
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.features {
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (min-width: @tablet-width) {
+      column-gap: 139px;
+      row-gap: 37px;
+      counter-reset: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      gap: 0;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 280px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-color: @basic_green;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media (min-width: @tablet-width) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &:first-child::before {
+      background-image: url("../../img/features-img-1.svg");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../../img/features-img-2.svg");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../../img/features-img-3.svg");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("../../img/features-img-4.svg");
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 249px;
+      min-height: 280px;
+      counter-increment: number;
+
+      &::before {
+        top: 40px;
+        left: 0;
+      }
+
+      &::after {
+        content: counter(number);
+        .font-oswald(280px, 280px);
+
+        position: absolute;
+        top: 0;
+        left: 115px;
+        z-index: -1;
+        color: @basic_grey-2;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+    }
+  }
+
+  &__text {
+    width: 200px;
+    margin-left: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 245px;
+      margin: 0;
+      margin-top: auto;
+      margin-bottom: 60px;
+    }
+  }
+}
