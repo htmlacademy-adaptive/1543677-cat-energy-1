@@ -1,1 +1,0 @@
-function removeCheckedState(){const e=document.querySelector(".main-nav__input");window.innerWidth>768&&(e.checked=!1)}removeCheckedState(),window.addEventListener("resize",removeCheckedState);
