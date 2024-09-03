@@ -1,0 +1,25 @@
+.expenses {
+  .font-oswald(14px, 20px);
+
+  color: @color-black;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald(20px, 20px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-height: 72px;
+    gap: 7px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 63px;
+    padding-bottom: 0;
+  }
+}
