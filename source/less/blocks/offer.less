@@ -1,4 +1,6 @@
 .offer {
+  width: 100%;
+
   @media (min-width: @desktop-width) {
     position: relative;
   }
@@ -8,17 +10,19 @@
     padding: 26px 20px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 
     @media (min-width: @tablet-width) {
       width: 768px;
-      padding: 60px 70px;
+      padding: 60px 68px;
       justify-content: space-between;
     }
 
     @media (min-width: @desktop-width) {
       position: absolute;
       top: 95px;
-      left: 110px;
+      right: 50%;
+      transform: translateX(-46px);
       width: 565px;
       padding: 60px 78px 60px 80px;
       justify-content: space-between;
@@ -61,6 +65,7 @@
 
   &__map-img {
     display: block;
+    width: 100%;
   }
 
   &__map iframe {

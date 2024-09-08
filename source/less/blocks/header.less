@@ -1,17 +1,21 @@
 .header {
-  width: 100%;
+  .center-horizontal();
+
+  width: 279px;
   display: flex;
   align-items: center;
-  padding: 13px 20px 12px 20px;
+  padding: 13px 0 12px;
 
   @media (min-width: @tablet-width) {
+    width: 704px;
     min-height: 50px;
-    padding: 25px 30px 60px 30px;
+    padding: 25px 0 60px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
     min-height: 59px;
-    padding: 55px 110px 70px 110px;
+    padding: 50px 0 29px;
   }
 
   & .logo-text__img {
@@ -25,11 +29,7 @@
   margin-right: 56px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 13px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 14px;
+    margin-right: 0;
   }
 }
 

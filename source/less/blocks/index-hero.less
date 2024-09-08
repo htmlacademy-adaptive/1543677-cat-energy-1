@@ -1,26 +1,51 @@
 .main__hero {
-  @media (min-width: @tablet-width) {
-    .center-horizontal();
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
   }
 }
 
 .hero {
   position: relative;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 27px;
-  padding-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 708px;
-    align-items: flex-start;
-    padding: 0;
-  }
+  width: 100%;
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    position: static;
+  }
+  &__content {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 27px 0 20px;
+
+    @media (min-width: @tablet-width) {
+      position: relative;
+      max-width: 708px;
+      padding: 0;
+      top: 1px;
+      align-items: flex-start;
+    }
+    @media (min-width: @desktop-width) {
+      max-width: 1220px;
+      position: static;
+      display: grid;
+      grid-template-columns: 500px auto;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__texts {
+    @media (min-width: @desktop-width) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  &__img-wrapper {
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 
   &__title {
@@ -29,15 +54,18 @@
     margin-bottom: 25px;
 
     @media (min-width: @tablet-width) {
-      width: 420px;
+      width: 510px;
       text-align: left;
-      margin-left: 90px;
+      padding-left: 90px;
       margin-bottom: 40px;
       color: @color-black;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 80px;
+      width: 500px;
+      padding-left: 80px;
+      padding-top: 80px;
+      margin-bottom: 39px;
     }
   }
 
@@ -48,17 +76,15 @@
     color: #ffffff;
     margin-bottom: 29px;
     text-transform: uppercase;
-
     @media (min-width: @tablet-width) {
       .font-oswald(20px, 20px);
       text-align: left;
       color: @color-black;
-      margin-left: 90px;
-      margin-bottom: 22px;
+      padding-left: 90px;
+      margin-bottom: 21px;
     }
-
     @media (min-width: @desktop-width) {
-      margin-left: 80px;
+      padding-left: 80px;
       margin-bottom: 53px;
     }
   }
@@ -66,34 +92,44 @@
   &__img {
     display: block;
     margin-bottom: 3px;
-
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
+    @media (min-width: @desktop-width) {
+      position: relative;
+      left: -52px;
+    }
   }
 
-  &__img-wrapper {
-    @media (min-width: @desktop-width) {
+  &__button {
+    width: 280px;
+    @media (min-width: @tablet-width) {
       position: absolute;
-      top: -81px;
-      left: 447px;
+      top: 230px;
+      left: 90px;
+      width: 244px;
+    }
+    @media (min-width: @desktop-width) {
+      position: static;
+      grid-column: 1 / span 2;
+      grid-row: 2;
+      justify-self: start;
+      margin-bottom: 134px;
+      margin-left: 80px;
     }
   }
 
   &__bg-img {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 320px;
-    min-height: 302px;
     background-image: url("../img/index-bg-img-1.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 302px;
     z-index: -1;
-
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index-bg-img-1@2x.png");
-      background-size: 320px auto;
     }
 
     &::before {
@@ -104,7 +140,6 @@
       top: 0;
       left: 0;
       background-color: @bg-transparent-overlay;
-      z-index: 2;
     }
 
     @media (min-width: @tablet-width) {
@@ -113,36 +148,15 @@
 
     @media (min-width: @desktop-width) {
       display: block;
-      position: absolute;
-      width: 720px;
-      height: 725px;
-      background-image: url("../img/index-background-desktop-1.png");
-      background-position: bottom;
+      top: 0;
+      left: 50%;
+      transform: translateX(0);
+      background-image: url("../img/index-background-desktop-1.jpg");
+      background-position: bottom left;
       background-color: @color-black;
-      top: -254px;
-      left: 610px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-background-desktop-1@2x.png");
-        background-size: 720px auto;
-      }
-    }
-  }
-
-  &__button {
-    width: 280px;
-
-    @media (min-width: @tablet-width) {
       position: absolute;
-      left: 90px;
-      top: 230px;
-      width: 244px;
-    }
-
-    @media (min-width: @desktop-width) {
-      position: static;
-      margin-left: 80px;
-      margin-bottom: 266px;
+      width: 50vw;
+      height: 691px;
     }
   }
 }

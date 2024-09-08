@@ -1,5 +1,5 @@
 .additional {
-  border-top: 1px solid #ebebeb;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     border-top: none;
@@ -38,21 +38,21 @@
       content: "";
       position: absolute;
       top: 45%;
-      right: -19px;
+      left: 252px;
       transform: translateY(-50%);
-      width: 54px;
+      width: calc(48px + (100vw - 320px) / 2);
       height: 2px;
       background-color: @basic_green;
 
       @media (min-width: @tablet-width) {
-        width: 320px;
-        right: -29px;
+        left: 418px;
         top: 19px;
+        width: calc(320px + (100vw - 768px) / 2);
       }
 
       @media (min-width: @desktop-width) {
-        width: 952px;
-        right: -110px;
+        left: 378px;
+        width: calc(952px + (100vw - 1440px) / 2);
       }
     }
 
@@ -61,15 +61,15 @@
         content: "";
         position: absolute;
         top: 19px;
-        left: -30px;
-        width: 30px;
+        right: 708px;
+        width: calc(30px + (100vw - 768px) / 2);
         height: 2px;
         background-color: #68b738;
       }
 
       @media (min-width: @desktop-width) {
-        width: 70px;
-        left: -110px;
+        right: 1260px;
+        width: calc(70px + (100vw - 1440px) / 2);
       }
     }
   }

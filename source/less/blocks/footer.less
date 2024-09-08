@@ -1,20 +1,23 @@
 .footer {
-  width: 320px;
+  width: 100%;
   background-color: @basic_grey;
-  padding: 40px 20px 40px 20px;
+  &__content {
+    width: 320px;
+    margin: 0 auto;
+    padding: 40px 20px 40px 20px;
 
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 57px 30px;
-    display: flex;
-    align-items: center;
+    @media (min-width: @tablet-width) {
+      width: 768px;
+      padding: 57px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1440px;
+      padding: 66px 110px;
+    }
   }
-
-  @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 66px 110px;
-  }
-
   &__logo-text {
     display: flex;
     justify-content: center;

@@ -1,17 +1,23 @@
 .show-all {
-  padding: 23px 20px 25px 20px;
-
   @media (min-width: @tablet-width) {
     align-self: end;
-    width: 324px;
-    padding: 50px 37px 40px 37px;
-    border: 1px solid @line-light-gray;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 245px;
-  }
+  &__container {
+    margin: 0 auto;
+    width: 280px;
+    padding: 23px 0 25px;
 
+    @media (min-width: @tablet-width) {
+      width: 324px;
+      padding: 50px 37px 40px 37px;
+      border: 1px solid @line-light-gray;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 245px;
+    }
+  }
   &__lead {
     .font-oswald(16px, 20px);
 
