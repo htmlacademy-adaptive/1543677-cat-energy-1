@@ -91,7 +91,7 @@
 
   &__img {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
@@ -149,14 +149,17 @@
     @media (min-width: @desktop-width) {
       display: block;
       top: 0;
-      left: 50%;
+      left: auto;
+      right: 0;
       transform: translateX(0);
       background-image: url("../img/index-background-desktop-1.jpg");
       background-position: bottom left;
+      background-repeat: no-repeat;
+      background-size: cover;
       background-color: @color-black;
       position: absolute;
       width: 50vw;
-      height: 691px;
+      height: 694px;
     }
   }
 }

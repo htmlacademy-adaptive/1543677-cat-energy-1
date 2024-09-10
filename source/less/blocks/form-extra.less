@@ -23,20 +23,20 @@
       content: "";
       position: absolute;
       top: 13px;
-      right: -19px;
-      width: 139px;
+      left: 161px;
+      width: calc(139px + (100vw - 320px) / 2);
       height: 2px;
       background-color: @basic_green;
 
       @media (min-width: @tablet-width) {
-        width: 446px;
-        top: 19px;
-        right: -70px;
+        width: calc(446px + (100vw - 768px) / 2);
+        top: 22px;
+        left: 252px;
       }
 
       @media (min-width: @desktop-width) {
-        width: 1078px;
-        right: -110px;
+        width: calc(1078px + (100vw - 1440px) / 2);
+        left: 252px;
         top: 21px;
       }
     }
@@ -45,16 +45,16 @@
       @media (min-width: @tablet-width) {
         content: "";
         position: absolute;
-        top: 19px;
-        left: -70px;
-        width: 30px;
+        top: 22px;
+        right: 668px;
+        width: calc(30px + (100vw - 768px) / 2);
         height: 2px;
         background-color: @basic_green;
       }
 
       @media (min-width: @desktop-width) {
-        width: 70px;
-        left: -110px;
+        width: calc(70px + (100vw - 1440px) / 2);
+        right: 1260px;
         top: 21px;
       }
     }

@@ -13,9 +13,11 @@
   }
 
   &__list {
+    .center-horizontal();
+
     list-style: none;
-    width: 320px;
-    padding: 22px 20px 19px 20px;
+    width: 280px;
+    padding: 22px 0 19px;
     display: flex;
     flex-direction: column;
     gap: 13px;
@@ -38,7 +40,7 @@
     display: flex;
     align-items: center;
     column-gap: 15px;
-    @media (min-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       column-gap: 20px;
     }
   }
