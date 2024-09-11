@@ -153,7 +153,10 @@ export const build = gulp.series(
     svg,
     sprite,
     createWebp
-  ),
+  ), gulp.series(
+    server,
+    watcher
+  )
 );
 
 export default gulp.series(

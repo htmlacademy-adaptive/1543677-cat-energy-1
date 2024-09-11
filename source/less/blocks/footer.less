@@ -1,20 +1,23 @@
 .footer {
-  width: 320px;
+  width: 100%;
   background-color: @basic_grey;
-  padding: 40px 20px 40px 20px;
+  &__content {
+    width: 320px;
+    margin: 0 auto;
+    padding: 40px 20px 40px 20px;
 
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 57px 30px;
-    display: flex;
-    align-items: center;
+    @media (min-width: @tablet-width) {
+      width: 768px;
+      padding: 57px 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1440px;
+      padding: 66px 110px;
+    }
   }
-
-  @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 66px 110px;
-  }
-
   &__logo-text {
     display: flex;
     justify-content: center;
@@ -49,84 +52,11 @@
   }
 
   &__htmlacademy {
-    padding-top: 20px;
+    padding-top: 17px;
 
     @media (min-width: @tablet-width) {
       padding: 0;
       margin-left: auto;
-    }
-  }
-}
-
-.social-link {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__item a {
-    width: 28px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__icon {
-    transition: fill 0.5s ease-out;
-
-    &:hover,
-    &:focus-visible {
-      fill: @basic_green;
-    }
-
-    &:active path {
-      fill: fade(@basic_green, 30%);
-    }
-  }
-}
-
-.htmlacademy-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-
-  @media (min-width: @tablet-width) {
-    width: 168px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__text {
-    .font-lato(16px, 20px);
-
-    color: @color-special_dark-gray;
-    transition: color 0.5s ease-out;
-
-    @media (min-width: @tablet-width) {
-      padding-left: 5px;
-    }
-  }
-
-  &__icon {
-    transition: fill 0.5s ease-out;
-  }
-
-  &:hover {
-    .htmlacademy-link__icon {
-      fill: @basic_green;
-    }
-  }
-
-  &:active {
-    .htmlacademy-link__icon {
-      fill: fade(@basic_green, 30%);
-    }
-
-    .htmlacademy-link__text {
-      color: fade(@color-special_dark-gray, 30%);
     }
   }
 }

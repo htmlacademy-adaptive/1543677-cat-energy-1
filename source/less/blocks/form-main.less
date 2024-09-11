@@ -1,6 +1,6 @@
 .form-main {
+  width: 100%;
   border-top: 1px solid @line-light-gray;
-  padding-top: 25px;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -8,15 +8,18 @@
   }
 
   &__title {
-    width: 100%;
-    padding: 0 20px;
+    .center-horizontal();
+
+    width: 280px;
+    padding: 0;
+    padding-top: 24px;
     text-transform: none;
     margin-bottom: 39px;
 
     @media (min-width: @tablet-width) {
-      .center-horizontal();
       width: 708px;
       text-align: left;
+      padding: 0;
       padding-left: 40px;
       margin-bottom: 54px;
     }
@@ -24,34 +27,37 @@
     @media (min-width: @desktop-width) {
       width: 1220px;
       padding-left: 0;
+      padding-top: 43px;
       text-align: left;
       margin-bottom: 55px;
     }
   }
 
   &__lead {
+    .center-horizontal();
     .font-oswald(14px, 18px);
 
-    width: 246px;
+    width: 280px;
     color: @color-black;
-    padding-left: 20px;
+    padding-right: 54px;
     text-transform: uppercase;
     margin-bottom: 38px;
 
     @media (min-width: @tablet-width) {
       .font-oswald(20px, 30px);
 
-      width: 393px;
+      width: 708px;
       text-align: left;
-      padding-left: 70px;
-      margin-left: 0;
+      padding-left: 40px;
+      padding-right: 345px;
       margin-bottom: 66px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 323px;
+      width: 1220px;
       padding-left: 0;
       text-align: left;
+      padding-right: 897px;
       margin-left: 110px;
       margin-bottom: 66px;
     }

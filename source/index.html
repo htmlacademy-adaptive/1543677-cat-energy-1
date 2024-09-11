@@ -3,6 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="fonts/lato/Lato-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/lato/Lato-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="fonts/oswald/oswaldregular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/oswald/oswaldregular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
@@ -10,7 +39,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body body">
+  <body class="page__body">
     <svg style="display: none">
       <symbol viewBox="0 0 27 17" id="vk-icon">
         <path
@@ -40,7 +69,7 @@
       </symbol>
     </svg>
     <header class="body__header header">
-      <a class="header__logo logo-1" href="/">
+      <a class="header__logo logo-1" href="#">
         <picture>
           <source
             media="(min-width: 1440px)"
@@ -102,74 +131,79 @@
     </header>
     <main class="body__main main">
       <section class="main__hero hero">
-        <div class="hero__texts">
-          <h1 class="hero__title heading-large-tight">
-            Функциональное питание для котов
-          </h1>
-          <p class="hero__lead">Занялся собой? Займись котом!</p>
+        <div class="hero__content">
+          <div class="hero__texts">
+            <h1 class="hero__title heading-large-tight">
+              Функциональное питание для котов
+            </h1>
+            <p class="hero__lead">Занялся собой? Займись котом!</p>
+          </div>
+
+          <div class="hero__img-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="
+                  img/hiro-photo-desktop.webp    1x,
+                  img/hiro-photo-desktop@2x.webp 2x
+                "
+                width="552"
+                height="499"
+              />
+              <source
+                media="(min-width: 768px)"
+                type="image/webp"
+                srcset="
+                  img/hiro-photo-tablet.webp    1x,
+                  img/hiro-photo-tablet@2x.webp 2x
+                "
+                width="709"
+                height="609"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/hiro-photo-mobile.webp    1x,
+                  img/hiro-photo-mobile@2x.webp 2x
+                "
+                width="280"
+                height="270"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="
+                  img/hiro-photo-desktop.png    1x,
+                  img/hiro-photo-desktop@2x.png 2x
+                "
+                width="552"
+                height="499"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  img/hiro-photo-tablet.png    1x,
+                  img/hiro-photo-tablet@2x.png 2x
+                "
+                width="709"
+                height="609"
+              />
+              <img
+                class="hero__img"
+                src="img/hiro-photo-mobile.png"
+                srcset="img/hiro-photo-mobile@2x.png 2x"
+                alt="Ресунок продукта"
+                width="280"
+                height="270"
+              />
+            </picture>
+          </div>
+
+          <a class="hero__button button-primary" href="#"
+            >Подобрать программу</a
+          >
         </div>
         <div class="hero__bg-img"></div>
-        <div class="hero__img-wrapper">
-          <picture>
-            <source
-              media="(min-width: 1440px)"
-              srcset="
-                img/hiro-photo-desktop.webp    1x,
-                img/hiro-photo-desktop@2x.webp 2x
-              "
-              width="552"
-              height="499"
-            />
-            <source
-              media="(min-width: 768px)"
-              type="image/webp"
-              srcset="
-                img/hiro-photo-tablet.webp    1x,
-                img/hiro-photo-tablet@2x.webp 2x
-              "
-              width="709"
-              height="609"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                img/hiro-photo-mobile.webp    1x,
-                img/hiro-photo-mobile@2x.webp 2x
-              "
-              width="280"
-              height="270"
-            />
-
-            <source
-              media="(min-width: 1440px)"
-              srcset="
-                img/hiro-photo-desktop.png    1x,
-                img/hiro-photo-desktop@2x.png 2x
-              "
-              width="552"
-              height="499"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                img/hiro-photo-tablet.png    1x,
-                img/hiro-photo-tablet@2x.png 2x
-              "
-              width="709"
-              height="609"
-            />
-            <img
-              class="hero__img"
-              src="img/hiro-photo-mobile.png"
-              srcset="img/hiro-photo-mobile@2x.png 2x"
-              alt="Ресунок продукта"
-              width="280"
-              height="270"
-            />
-          </picture>
-        </div>
-
-        <a class="hero__button button-primary" href="#">Подобрать программу</a>
       </section>
       <section class="main__services services">
         <ul class="services__list programs">
@@ -183,22 +217,11 @@
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
-            <a class="programs__link" href="source/catalog.html">
+            <a class="programs__link" href="#">
               <span class="programs__link-text">Каталог slim</span>
-              <picture>
-                <source
-                  class="programs__link-icon"
-                  type="image/webp"
-                  srcset="img/icon-arrow.webp 1x, img/icon-arrow@2x.webp 2x"
-                />
-
-                <img
-                  class="programs__link-icon"
-                  src="img/icon-arrow.png"
-                  srcset="img/icon-arrow@2x.png 2x"
-                  alt="иконка стрелы"
-                />
-              </picture>
+              <div class="programs__link-icon">
+                <span class="visually-hidden">стрела ссылки</span>
+              </div>
             </a>
           </li>
           <li class="programs__item">
@@ -212,20 +235,9 @@
             </p>
             <a class="programs__link" href="catalog.html">
               <span class="programs__link-text">каталог pro</span>
-              <picture>
-                <source
-                  class="programs__link-icon"
-                  type="image/webp"
-                  srcset="img/icon-arrow.webp 1x, img/icon-arrow@2x.webp 2x"
-                />
-
-                <img
-                  class="programs__link-icon"
-                  src="img/icon-arrow.png"
-                  srcset="img/icon-arrow@2x.png 2x"
-                  alt="иконка стрелы"
-                />
-              </picture>
+              <div class="programs__link-icon">
+                <span class="visually-hidden">стрела ссылки</span>
+              </div>
             </a>
           </li>
         </ul>
@@ -260,14 +272,15 @@
         </ul>
       </section>
       <section class="main__real-case real-case">
-        <h2 class="real-case__title heading-large-loose">Живой пример</h2>
-        <p class="real-case__text index-basic-text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-          Cat Energy Slim. Отличный результат <br />
-          без изнуряющих тренировок! При этом он не менял своих привычек и
-          по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="real-case__wrapper">
+        <div class="real-case__content">
+          <h2 class="real-case__title heading-large-loose">Живой пример</h2>
+          <p class="real-case__text index-basic-text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+            Cat Energy Slim. Отличный результат <br />
+            без изнуряющих тренировок! При этом он не менял своих привычек и
+            по-прежнему спит по 16 часов в день.
+          </p>
+
           <div class="real-case__example example">
             <ul class="example__list">
               <li class="example__item">
@@ -280,87 +293,87 @@
               </li>
             </ul>
           </div>
+
           <p class="real-case__expenses expenses">
             Затраты на питание:
             <span class="expenses__cost-of-product">15 000 РУБ.</span>
           </p>
-        </div>
-        <div class="real-case__cat-transform cat-transform">
-          <picture>
-            <source
-              class="cat-transform__image"
-              type="image/webp"
-              media="(min-width: 768px)"
-              srcset="img/cat-trans-t-b.webp 1x, img/cat-trans-t-b@2x.webp 2x"
-              width="280"
-              height="512"
-            />
-            <source
-              class="cat-transform__image"
-              type="image/webp"
-              srcset="img/cat-trans-m-b.webp 1x, img/cat-trans-m-b@2x.webp 2x"
-              alt="Жырный кот"
-              width="140"
-              height="256"
-            />
 
-            <source
-              class="cat-transform__image"
-              media="(min-width: 768px)"
-              srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
-              width="280"
-              height="512"
-            />
-            <img
-              class="cat-transform__image"
-              src="img/cat-trans-m-b.png"
-              srcset="img/cat-trans-m-b@2x.png 2x"
-              alt="Жырный кот"
-              width="140"
-              height="256"
-            />
-          </picture>
-          <div class="cat-transform__control">
-            <button class="cat-transform__control-button" type="button">
-              <svg width="24" height="18" fill="#666666">
-                <use xlink:href="#transform-button"></use>
-              </svg>
-            </button>
+          <div class="real-case__cat-transform cat-transform">
+            <picture>
+              <source
+                class="cat-transform__image"
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="img/cat-trans-t-b.webp 1x, img/cat-trans-t-b@2x.webp 2x"
+                width="280"
+                height="512"
+              />
+              <source
+                class="cat-transform__image"
+                type="image/webp"
+                srcset="img/cat-trans-m-b.webp 1x, img/cat-trans-m-b@2x.webp 2x"
+                width="140"
+                height="256"
+              />
+
+              <source
+                class="cat-transform__image"
+                media="(min-width: 768px)"
+                srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
+                width="280"
+                height="512"
+              />
+              <img
+                class="cat-transform__image"
+                src="img/cat-trans-m-b.png"
+                srcset="img/cat-trans-m-b@2x.png 2x"
+                alt="Жырный кот"
+                width="140"
+                height="256"
+              />
+            </picture>
+            <div class="cat-transform__control">
+              <button class="cat-transform__control-button" type="button">
+                <svg width="24" height="18" fill="#666666">
+                  <use xlink:href="#transform-button"></use>
+                </svg>
+              </button>
+            </div>
+            <picture>
+              <source
+                class="cat-transform__image"
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="img/cat-trans-t-s.webp 1x, img/cat-trans-t-s@2x.webp 2x"
+                width="280"
+                height="512"
+              />
+              <source
+                class="cat-transform__image"
+                type="image/webp"
+                srcset="img/cat-trans-m-s.webp 1x, img/cat-trans-m-s@2x.webp 2x"
+                width="140"
+                height="256"
+              />
+
+              <source
+                class="cat-transform__image"
+                media="(min-width: 768px)"
+                srcset="img/cat-trans-t-s.png 1x, img/cat-trans-t-s@2x.png 2x"
+                width="280"
+                height="512"
+              />
+              <img
+                class="cat-transform__image"
+                src="img/cat-trans-m-s.png"
+                srcset="img/cat-trans-m-s@2x.png 2x"
+                alt="Нормальный кот"
+                width="140"
+                height="256"
+              />
+            </picture>
           </div>
-          <picture>
-            <source
-              class="cat-transform__image"
-              type="image/webp"
-              media="(min-width: 768px)"
-              srcset="img/cat-trans-t-s.webp 1x, img/cat-trans-t-s@2x.webp 2x"
-              width="280"
-              height="512"
-            />
-            <source
-              class="cat-transform__image"
-              type="image/webp"
-              srcset="img/cat-trans-m-s.webp 1x, img/cat-trans-m-s@2x.webp 2x"
-              alt="Нормальный кот"
-              width="140"
-              height="256"
-            />
-
-            <source
-              class="cat-transform__image"
-              media="(min-width: 768px)"
-              srcset="img/cat-trans-t-s.png 1x, img/cat-trans-t-s@2x.png 2x"
-              width="280"
-              height="512"
-            />
-            <img
-              class="cat-transform__image"
-              src="img/cat-trans-m-s.png"
-              srcset="img/cat-trans-m-s@2x.png 2x"
-              alt="Нормальный кот"
-              width="140"
-              height="256"
-            />
-          </picture>
         </div>
       </section>
 
@@ -387,68 +400,73 @@
       </section>
     </main>
     <footer class="body__footer footer">
-      <div class="footer__logo-text logo-text">
-        <img
-          class="logo-text__img"
-          src="img/logo-text.svg"
-          alt="CAT Energy"
-          width="128"
-          height="24"
-        />
-      </div>
-      <ul class="footer__social-link social-link">
-        <li class="social-link__item">
-          <span class="visually-hidden">VK</span>
-          <a href="#" class="social-link__vk"
-            ><svg
-              class="social-link__icon"
-              width="27"
-              height="17"
-              fill="#666666"
-            >
-              <use xlink:href="#vk-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-link__item">
-          <span class="visually-hidden">Youtube</span
-          ><a href="#" class="social-link__youtube"
-            ><svg
-              class="social-link__icon"
-              width="24"
-              height="19"
-              fill="#666666"
-            >
-              <use xlink:href="#youtube-icon"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-link__item">
-          <span class="visually-hidden">Telegram</span
-          ><a href="#" class="social-link__telegram"
-            ><svg
-              class="social-link__icon"
-              width="20"
-              height="18"
-              fill="#666666"
-            >
-              <use xlink:href="#telegram-icon"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="footer__content">
+        <div class="footer__logo-text logo-text">
+          <img
+            class="logo-text__img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="128"
+            height="24"
+          />
+        </div>
+        <ul class="footer__social-link social-link">
+          <li class="social-link__item">
+            <span class="visually-hidden">VK</span>
+            <a href="#" class="social-link__vk"
+              ><svg
+                class="social-link__icon"
+                width="27"
+                height="17"
+                fill="#666666"
+              >
+                <use xlink:href="#vk-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link__item">
+            <span class="visually-hidden">Youtube</span
+            ><a href="#" class="social-link__youtube"
+              ><svg
+                class="social-link__icon"
+                width="24"
+                height="19"
+                fill="#666666"
+              >
+                <use xlink:href="#youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link__item">
+            <span class="visually-hidden">Telegram</span
+            ><a href="#" class="social-link__telegram"
+              ><svg
+                class="social-link__icon"
+                width="20"
+                height="18"
+                fill="#666666"
+              >
+                <use xlink:href="#telegram-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-      <a class="footer__htmlacademy htmlacademy-link" href="www.htmlacademy.ru"
-        ><span class="htmlacademy-link__text">HTML Academy</span
-        ><span class="visually-hidden">Логотип htmlacademy</span
-        ><svg
-          class="htmlacademy-link__icon"
-          width="27"
-          height="35"
-          fill="#666666"
-        >
-          <use xlink:href="#htmlacademy-icon"></use></svg
-      ></a>
+        <a
+          class="footer__htmlacademy htmlacademy-link"
+          href="https://htmlacademy.ru"
+          ><span class="htmlacademy-link__text">HTML Academy</span
+          ><span class="visually-hidden">Логотип htmlacademy</span
+          ><svg
+            class="htmlacademy-link__icon"
+            width="27"
+            height="35"
+            fill="#666666"
+          >
+            <use xlink:href="#htmlacademy-icon"></use></svg
+        ></a>
+      </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
