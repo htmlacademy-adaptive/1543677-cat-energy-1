@@ -10,6 +10,7 @@
     padding-top: 45px;
     padding-bottom: 101px;
     background-color: #ffffff;
+
     &::before {
       content: "";
       position: absolute;
@@ -44,6 +45,7 @@
       grid-template-columns: 1fr 1fr;
       z-index: 2;
     }
+
     @media (min-width: @desktop-width) {
       max-width: 1220px;
       grid-template-columns: 436px auto;
@@ -52,11 +54,13 @@
 
   &__title {
     margin-bottom: 40px;
+
     @media (min-width: @tablet-width) {
       grid-column: 1 / span 2;
       grid-row: 1;
       margin-bottom: 60px;
     }
+
     @media (min-width: @desktop-width) {
       grid-column: 1;
       margin-bottom: 146px;
@@ -65,14 +69,17 @@
 
   &__text {
     margin-bottom: 20px;
+
     br {
       display: none;
     }
+
     @media (min-width: @tablet-width) {
       grid-column: 1 / span 2;
       grid-row: 2;
       margin-bottom: 55px;
     }
+
     @media (min-width: @desktop-width) {
       grid-column: 1;
       margin-bottom: 69px;
@@ -81,9 +88,11 @@
 
   &__example {
     margin-bottom: 34px;
+
     @media (min-width: @tablet-width) {
       margin-bottom: 102px;
     }
+
     @media (min-width: @desktop-width) {
       grid-column: 1;
       grid-row: 3;
@@ -93,6 +102,7 @@
 
   &__expenses {
     margin-bottom: 20px;
+
     @media (min-width: @desktop-width) {
       grid-column: 1;
       grid-row: 4;
@@ -105,6 +115,7 @@
       grid-column: 1 / span 2;
       grid-row: 4;
     }
+
     @media (min-width: @desktop-width) {
       grid-column: 2;
       grid-row: 1 / span 4;
