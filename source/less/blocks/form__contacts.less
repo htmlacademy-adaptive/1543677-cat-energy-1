@@ -1,0 +1,141 @@
+.contacts {
+  border: none;
+  width: 280px;
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+
+  &__title {
+    position: relative;
+    width: 187px;
+    margin-bottom: 35px;
+    text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      width: 517px;
+      margin-bottom: 74px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 201px;
+      width: calc(88px + (100vw - 320px) / 2);
+      height: 2px;
+      background-color: #68b738;
+
+      @media (min-width: @tablet-width) {
+        width: calc(146px + (100vw - 768px) / 2);
+        top: 19px;
+        left: 543px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: calc(778px + (100vw - 1440px) / 2);
+        left: 541px;
+      }
+    }
+
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        top: 19px;
+        right: 548px;
+        width: calc(30px + (100vw - 768px) / 2);
+        height: 2px;
+        background-color: @basic_green;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: calc(70px + (100vw - 1440px) / 2);
+        right: 546px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      gap: 18px;
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1220px;
+      flex-direction: row;
+      gap: 80px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      width: 570px;
+    }
+  }
+
+  &__control {
+    flex-shrink: 0;
+
+    &::after {
+      content: "*";
+    }
+  }
+
+  &__input {
+    padding: 14px 15px 13px 14px;
+    color: @special_grey-2;
+    border: 1px solid @special_grey;
+    outline: none;
+    flex-grow: 1;
+    transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+    &:hover {
+      color: @color-special_dark-gray;
+      border-color: @special_grey-2;
+    }
+
+    &:hover ~ .contacts__input-icon {
+      stroke: @basic_green;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 20px;
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: stroke 0.5s ease-in-out;
+
+    @media (min-width: @tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 16px;
+    }
+  }
+}

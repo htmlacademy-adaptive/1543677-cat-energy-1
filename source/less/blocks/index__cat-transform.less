@@ -1,0 +1,74 @@
+.cat-transform {
+  position: relative;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+    padding: 0;
+    width: 560px;
+    height: 512px;
+    align-self: start;
+    justify-self: flex-end;
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__control {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #666666;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease-in;
+
+    &:has(.cat-transform__control-button:hover) {
+      background-color: @basic_green;
+    }
+
+    &:has(.cat-transform__control-button:active) {
+      background-color: fade(@basic_green, 30%);
+    }
+  }
+
+  &__control-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666666;
+    background-color: #ffffff;
+    border-radius: 100%;
+    transition: border-color 0.5s ease-in;
+
+    & svg {
+      transition: fill 0.5s ease-in;
+    }
+
+    &:hover {
+      border-color: @basic_green;
+    }
+
+    &:hover svg {
+      fill: @basic_green;
+    }
+
+    &:active {
+      border-color: fade(@basic_green, 50%);
+    }
+
+    &:active svg {
+      fill: fade(@basic_green, 50%);
+    }
+  }
+}
