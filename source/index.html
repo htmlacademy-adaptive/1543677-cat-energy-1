@@ -69,50 +69,51 @@
       </symbol>
     </svg>
     <header class="body__header header">
-      <a class="header__logo logo-1" href="#">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="img/logo-desktop.svg"
-            width="202"
-            height="59"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="img/logo-tablet.svg"
-            width="174"
-            height="50"
-          />
+      <div class="header__logo-container">
+        <a class="header__logo" href="#">
+          <picture>
+            <source
+              class="header__logo-image"
+              media="(min-width: 1440px)"
+              srcset="img/logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              class="header__logo-image"
+              media="(min-width: 768px)"
+              srcset="img/logo-tablet.svg"
+              width="174"
+              height="50"
+            />
+            <img
+              class="header__logo-image"
+              src="img/logo.svg"
+              alt="Логотип"
+              width="33"
+              height="38"
+            />
+          </picture>
+        </a>
+        <a class="header__logo-text" href="index.html">
           <img
-            class="logo-image"
-            src="img/logo.svg"
-            alt="Логотип"
-            width="33"
-            height="38"
+            class="header__logo-text-img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
           />
-        </picture>
-      </a>
-      <img
-        class="logo-text__img"
-        src="img/logo-text.svg"
-        alt="CAT Energy"
-        width="101"
-        height="18"
-      />
-      <nav class="header__nav main-nav">
-        <input
-          id="hamburger"
-          class="main-nav__input visually-hidden"
-          type="checkbox"
-        />
-        <label for="hamburger" class="main-nav__hamburger">
+        </a>
+        <button type="button" class="header__hamburger header__hamburger--open">
           <span class="visually-hidden">Кнопка гамбургер</span>
-        </label>
+        </button>
+      </div>
+      <nav class="header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a
-              href="#"
-              class="main-nav__link main-nav__link--color nav-link-active"
+              href="index.html"
+              class="main-nav__link main-nav__link--color main-nav__link--active"
               >Главная</a
             >
           </li>
@@ -122,7 +123,7 @@
             >
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link main-nav__link--color"
+            <a href="#" class="main-nav__link main-nav__link--color"
               >Подбор программы</a
             >
           </li>
@@ -199,7 +200,7 @@
             </picture>
           </div>
 
-          <a class="hero__button button-primary" href="#"
+          <a class="hero__button button--primary" href="#"
             >Подобрать программу</a
           >
         </div>
@@ -219,9 +220,6 @@
             </p>
             <a class="programs__link" href="#">
               <span class="programs__link-text">Каталог slim</span>
-              <div class="programs__link-icon">
-                <span class="visually-hidden">стрела ссылки</span>
-              </div>
             </a>
           </li>
           <li class="programs__item">
@@ -235,9 +233,6 @@
             </p>
             <a class="programs__link" href="catalog.html">
               <span class="programs__link-text">каталог pro</span>
-              <div class="programs__link-icon">
-                <span class="visually-hidden">стрела ссылки</span>
-              </div>
             </a>
           </li>
         </ul>
@@ -302,34 +297,34 @@
           <div class="real-case__cat-transform cat-transform">
             <picture>
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 type="image/webp"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-b.webp 1x, img/cat-trans-t-b@2x.webp 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 type="image/webp"
                 srcset="img/cat-trans-m-b.webp 1x, img/cat-trans-m-b@2x.webp 2x"
-                width="140"
+                width="280"
                 height="256"
               />
 
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <img
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 src="img/cat-trans-m-b.png"
                 srcset="img/cat-trans-m-b@2x.png 2x"
                 alt="Жырный кот"
-                width="140"
+                width="280"
                 height="256"
               />
             </picture>
@@ -342,41 +337,40 @@
             </div>
             <picture>
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 type="image/webp"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-s.webp 1x, img/cat-trans-t-s@2x.webp 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 type="image/webp"
                 srcset="img/cat-trans-m-s.webp 1x, img/cat-trans-m-s@2x.webp 2x"
-                width="140"
+                width="280"
                 height="256"
               />
 
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-s.png 1x, img/cat-trans-t-s@2x.png 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <img
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 src="img/cat-trans-m-s.png"
                 srcset="img/cat-trans-m-s@2x.png 2x"
                 alt="Нормальный кот"
-                width="140"
+                width="280"
                 height="256"
               />
             </picture>
           </div>
         </div>
       </section>
-
       <section class="main__offer offer">
         <div class="offer__wrapper">
           <h2 class="offer__title heading-small">
@@ -401,7 +395,7 @@
     </main>
     <footer class="body__footer footer">
       <div class="footer__content">
-        <div class="footer__logo-text logo-text">
+        <a class="footer__logo-text logo-text" href="index.html">
           <img
             class="logo-text__img"
             src="img/logo-text.svg"
@@ -409,11 +403,11 @@
             width="128"
             height="24"
           />
-        </div>
+        </a>
         <ul class="footer__social-link social-link">
           <li class="social-link__item">
-            <span class="visually-hidden">VK</span>
             <a href="#" class="social-link__vk"
+              ><span class="visually-hidden">VK</span
               ><svg
                 class="social-link__icon"
                 width="27"
@@ -425,8 +419,8 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Youtube</span
-            ><a href="#" class="social-link__youtube"
+            <a href="#" class="social-link__youtube"
+              ><span class="visually-hidden">Youtube</span
               ><svg
                 class="social-link__icon"
                 width="24"
@@ -438,8 +432,8 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Telegram</span
-            ><a href="#" class="social-link__telegram"
+            <a href="#" class="social-link__telegram"
+              ><span class="visually-hidden">Telegram</span
               ><svg
                 class="social-link__icon"
                 width="20"
