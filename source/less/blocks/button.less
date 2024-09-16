@@ -1,7 +1,7 @@
 .button {
-  &--primary {
-    .button-basic();
+  .button-basic();
 
+  &--primary {
     background-color: @button-primary-color;
     color: @color-white;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -17,8 +17,6 @@
   }
 
   &--secondary {
-    .button-basic();
-
     background-color: @button-secondery-color;
     color: @color-special_dark-gray;
     transition: background-color 0.5s ease-in-out;
