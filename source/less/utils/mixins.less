@@ -18,3 +18,18 @@
   font-size: @font-size;
   line-height: @line-height;
 }
+
+.button-basic() {
+  .font-oswald(16px, 20px);
+
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-oswald(20px, 26px);
+    padding: 14px 10px;
+  }
+}
