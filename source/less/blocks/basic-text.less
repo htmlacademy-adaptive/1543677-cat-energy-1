@@ -1,0 +1,32 @@
+.basic-text {
+  &--index {
+    .font-lato(14px, 18px);
+
+    color: @color-special_dark-gray;
+
+    @media (min-width: @tablet-width) {
+      .font-lato(16px, 24px);
+    }
+  }
+
+  &--form {
+    .font-oswald(16px, 18px);
+
+    color: @color-special_dark-gray;
+    text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      .font-oswald(20px, 30px);
+    }
+  }
+
+  &--catalog {
+    .font-lato(12px, 16px);
+
+    color: @color-special_dark-gray;
+
+    @media (min-width: @tablet-width) {
+      .font-lato(16px, 20px);
+    }
+  }
+}

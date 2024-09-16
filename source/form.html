@@ -120,7 +120,9 @@
       </nav>
     </header>
     <main class="body__main form-main">
-      <h1 class="form-main__title heading-large-tight">Подбор программы</h1>
+      <h1 class="form-main__title heading heading--large_tight">
+        Подбор программы
+      </h1>
       <p class="form-main__lead">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
@@ -128,11 +130,14 @@
         <fieldset class="form__about-cat about-cat">
           <ul class="about-cat__list">
             <li class="about-cat__item">
-              <label for="name" class="about-cat__control form-basic-text">
+              <label
+                for="name"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 ИМЯ:
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="text"
                 name="name"
                 id="name"
@@ -141,11 +146,14 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="mass" class="about-cat__control form-basic-text">
+              <label
+                for="mass"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 Вес (кг):
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="number"
                 name="mass"
                 id="mass"
@@ -156,11 +164,14 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="age" class="about-cat__control form-basic-text">
+              <label
+                for="age"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 Возраст (лет):
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="number"
                 name="age"
                 id="age"
@@ -185,7 +196,7 @@
                   checked
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Похудение</span>
+                <span class="basic-text basic-text--form">Похудение</span>
               </label>
             </li>
             <li class="looks__item">
@@ -198,7 +209,7 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Набор массы</span>
+                <span class="basic-text basic-text--form">Набор массы</span>
               </label>
             </li>
             <li class="looks__item">
@@ -211,22 +222,27 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Не знаю (Нужен ваш совет)</span>
+                <span class="basic-text basic-text--form"
+                  >Не знаю (Нужен ваш совет)</span
+                >
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__contacts contacts">
-          <h2 class="contacts__title heading-medium-tight">
+          <h2 class="contacts__title heading heading--medium_tight">
             Контактные данные (владельца кота)
           </h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <label for="email" class="contacts__control form-basic-text">
+              <label
+                for="email"
+                class="contacts__control basic-text basic-text--form"
+              >
                 E-mail:
               </label>
               <input
-                class="contacts__input form-basic-text"
+                class="contacts__input basic-text basic-text--form"
                 type="email"
                 name="email"
                 id="email"
@@ -250,11 +266,14 @@
               </svg>
             </li>
             <li class="contacts__item">
-              <label for="phone-num" class="contacts__control form-basic-text">
+              <label
+                for="phone-num"
+                class="contacts__control basic-text basic-text--form"
+              >
                 Телефон:
               </label>
               <input
-                class="contacts__input form-basic-text"
+                class="contacts__input basic-text basic-text--form"
                 type="tel"
                 name="phone-num"
                 id="phone-num"
@@ -280,16 +299,20 @@
           </ul>
         </fieldset>
         <fieldset class="form__comment comment">
-          <h2 class="comment__title heading-medium-tight">Комментарий</h2>
+          <h2 class="comment__title heading heading--medium_tight">
+            Комментарий
+          </h2>
           <textarea
-            class="comment__textarea form-basic-text"
+            class="comment__textarea basic-text basic-text--form"
             name="comment__text"
           >
 Расскажите обо всех повaдках кота</textarea
           >
         </fieldset>
         <fieldset class="form__extra extra">
-          <h2 class="extra__title heading-medium-tight">Дополнительно</h2>
+          <h2 class="extra__title heading heading--medium_tight">
+            Дополнительно
+          </h2>
           <ul class="extra__list">
             <li class="extra__item">
               <label for="sweetener" class="extra__control">
@@ -302,7 +325,9 @@
                   checked
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Сахарозаменитель</span>
+                <span class="basic-text basic-text--form"
+                  >Сахарозаменитель</span
+                >
               </label>
             </li>
             <li class="extra__item">
@@ -316,7 +341,7 @@
                   checked
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Питьевая вода</span>
+                <span class="basic-text basic-text--form">Питьевая вода</span>
               </label>
             </li>
             <li class="extra__item">
@@ -329,7 +354,7 @@
                   id="milk"
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Молоко</span>
+                <span class="basic-text basic-text--form">Молоко</span>
               </label>
             </li>
             <li class="extra__item">
@@ -342,13 +367,13 @@
                   id="vitamin"
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Витамины</span>
+                <span class="basic-text basic-text--form">Витамины</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <div class="form__wrapper">
-          <button type="submit" class="form__button button--primary">
+          <button type="submit" class="form__button button button--primary">
             Отправить заявку
           </button>
           <p class="form__text">— Обязательные поля</p>
@@ -356,7 +381,7 @@
       </form>
       <section class="form-main__offer offer">
         <div class="offer__wrapper">
-          <h2 class="offer__title heading-small">
+          <h2 class="offer__title heading heading--small">
             Приглашаем <br />
             к сотрудничеству дилеров!
           </h2>
