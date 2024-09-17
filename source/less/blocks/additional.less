@@ -18,6 +18,7 @@
     width: 280px;
     padding-top: 25px;
     padding-bottom: 36px;
+    padding-right: 50px;
 
     @media (min-width: @tablet-width) {
       .font-oswald(36px, 36px);
@@ -26,12 +27,14 @@
       margin: 0;
       padding: 0;
       padding-left: 40px;
+      padding-right: 310px;
       margin-bottom: 80px;
     }
 
     @media (min-width: @desktop-width) {
       padding: 0;
       margin-bottom: 78px;
+      padding-right: 840px;
     }
 
     &::before {
@@ -46,7 +49,7 @@
 
       @media (min-width: @tablet-width) {
         left: 409px;
-        top: 19px;
+        top: 22px;
         width: calc(320px + (100vw - 768px) / 2);
       }
 
@@ -61,7 +64,7 @@
       @media (min-width: @tablet-width) {
         content: "";
         position: absolute;
-        top: 19px;
+        top: 22px;
         right: 699px;
         width: calc(30px + (100vw - 768px) / 2);
         height: 2px;
@@ -92,7 +95,7 @@
   &__wrapper {
     @media (min-width: @desktop-width) {
       display: flex;
-      margin-bottom: 87px;
+      margin-bottom: 90px;
     }
   }
 }
