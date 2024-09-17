@@ -1,0 +1,130 @@
+.add-info {
+  .center-horizontal();
+
+  width: 280px;
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-top: 1px solid @line-almost-white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: start;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 26px 37px 27px 37px;
+    border-left: 1px solid @line-almost-white;
+    border-right: 1px solid @line-almost-white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 90px;
+    gap: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+    padding: 15px 0 16px;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 243px 82px 244px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    gap: 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid @line-almost-white;
+  }
+
+  &__name {
+    .font-oswald(16px, 16px);
+
+    text-transform: uppercase;
+    color: @color-dark-gray;
+    grid-column: 1/3;
+    padding-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      .font-oswald(20px, 20px);
+
+      grid-column: 1/2;
+      padding-bottom: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      align-self: center;
+    }
+  }
+
+  &__volume {
+    .font-lato(14px, 14px);
+
+    color: @color-special_dark-gray;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-bottom: 15px;
+
+    @media (min-width: @tablet-width) {
+      .font-lato(16px, 20px);
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding: 0;
+      padding-top: 3px;
+      margin: 0;
+      margin-left: auto;
+      margin-right: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      padding: 0;
+      margin-right: auto;
+      align-self: center;
+    }
+  }
+
+  &__value {
+    .font-lato(14px, 14px);
+
+    color: @color-special_dark-gray;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-left: auto;
+    padding-bottom: 15px;
+
+    @media (min-width: @tablet-width) {
+      .font-lato(16px, 20px);
+
+      padding: 0;
+      grid-column: 3/4;
+      grid-row: 1/2;
+      margin-left: auto;
+      margin-right: 4px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      margin: 0;
+      margin-right: auto;
+      align-self: center;
+    }
+  }
+
+  &__button {
+    grid-column: 1/3;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1/4;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @media (min-width: @desktop-width) {
+      grid-column: 4/5;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 244px;
+    }
+  }
+}

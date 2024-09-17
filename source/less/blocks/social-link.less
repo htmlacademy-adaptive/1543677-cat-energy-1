@@ -12,15 +12,16 @@
     align-items: center;
   }
 
-  &__icon {
+  &__icon-svg {
     transition: fill 0.5s ease-out;
-
-    &:hover,
-    &:focus-visible {
+  }
+  &__icon {
+    &:hover svg,
+    &:focus svg {
       fill: @basic_green;
     }
 
-    &:active path {
+    &:active svg {
       fill: fade(@basic_green, 30%);
     }
   }

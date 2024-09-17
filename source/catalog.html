@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body body">
     <svg style="display: none">
       <symbol viewBox="0 0 27 17" id="vk-icon">
         <path
@@ -64,51 +64,50 @@
       </symbol>
     </svg>
     <header class="body__header header">
-      <a class="header__logo logo-1" href="index.html">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="img/logo-desktop.svg"
-            width="202"
-            height="59"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="img/logo-tablet.svg"
-            width="174"
-            height="50"
-          />
+      <div class="header__logo-container">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-tablet.svg"
+              width="174"
+              height="50"
+            />
+            <img
+              class="header__logo-image"
+              src="img/logo.svg"
+              alt="Логотип"
+              width="33"
+              height="38"
+            />
+          </picture>
+        </a>
+        <a class="header__logo-text" href="index.html">
           <img
-            class="logo-image"
-            src="img/logo.svg"
-            alt="Логотип"
-            width="33"
-            height="38"
+            class="header__logo-text-img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
           />
-        </picture>
-      </a>
-      <img
-        class="logo-text__img"
-        src="img/logo-text.svg"
-        alt="CAT Energy"
-        width="101"
-        height="18"
-      />
-      <nav class="header__nav main-nav">
-        <input
-          id="hamburger"
-          class="main-nav__input visually-hidden"
-          type="checkbox"
-        />
-        <label for="hamburger" class="main-nav__hamburger">
+        </a>
+        <button type="button" class="header__hamburger header__hamburger--open">
           <span class="visually-hidden">Кнопка гамбургер</span>
-        </label>
+        </button>
+      </div>
+      <nav class="header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html" class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link nav-link-active"
+            <a href="#" class="main-nav__link main-nav__link--active"
               >Каталог продукции</a
             >
           </li>
@@ -118,57 +117,63 @@
         </ul>
       </nav>
     </header>
-    <main class="body__main">
+    <main class="body__main catalog">
       <section class="catalog__product product">
-        <h1 class="product__title heading-large-tight">Каталог продукции</h1>
-        <ul class="product__list catalog-basic-text">
+        <h1 class="product__title heading heading--large_tight">
+          Каталог продукции
+        </h1>
+        <ul class="product__list basic-text basic-text--catalog">
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-tablet-1.webp    1x,
-                      img/catalog-img-tablet-1@2x.webp 2x
-                    "
-                    width="161"
-                    height="172"
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-1.webp    1x,
-                      img/catalog-img-1@2x.webp 2x
-                    "
-                    width="68"
-                    height="86"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-tablet-1.webp    1x,
+                        img/catalog-img-tablet-1@2x.webp 2x
+                      "
+                      width="161"
+                      height="172"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-1.webp    1x,
+                        img/catalog-img-1@2x.webp 2x
+                      "
+                      width="68"
+                      height="86"
+                    />
 
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-1.png    1x,
-                      img/catalog-img-tablet-1@2x.png 2x
-                    "
-                    width="161"
-                    height="172"
-                  />
-                  <img
-                    class="product__img img-1"
-                    src="img/catalog-img-1.png"
-                    srcset="img/catalog-img-1@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="68"
-                    height="86"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-1.png    1x,
+                        img/catalog-img-tablet-1@2x.png 2x
+                      "
+                      width="161"
+                      height="172"
+                    />
+                    <img
+                      class="product__img img-1"
+                      src="img/catalog-img-1.png"
+                      srcset="img/catalog-img-1@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="68"
+                      height="86"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
-                  Cat Energy PRO 500 г
-                </h2>
+                <a class="product__name-link" href="#"
+                  ><h2 class="product__name heading heading--small">
+                    Cat Energy PRO 500 г
+                  </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -184,7 +189,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -192,53 +197,56 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    class="product__img img-2"
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-tablet-2.webp    1x,
-                      img/catalog-img-tablet-2@2x.webp 2x
-                    "
-                    width="168"
-                    height="206"
-                  />
-                  <source
-                    class="product__img img-2"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-2.webp    1x,
-                      img/catalog-img-2@2x.webp 2x
-                    "
-                    width="84"
-                    height="100"
-                  />
+                <a class="product__img-link" href="#"
+                  ><picture>
+                    <source
+                      class="product__img img-2"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-tablet-2.webp    1x,
+                        img/catalog-img-tablet-2@2x.webp 2x
+                      "
+                      width="168"
+                      height="206"
+                    />
+                    <source
+                      class="product__img img-2"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-2.webp    1x,
+                        img/catalog-img-2@2x.webp 2x
+                      "
+                      width="84"
+                      height="100"
+                    />
 
-                  <source
-                    class="product__img img-2"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-2.png    1x,
-                      img/catalog-img-tablet-2@2x.png 2x
-                    "
-                    width="168"
-                    height="206"
-                  />
-                  <img
-                    class="product__img img-2"
-                    src="img/catalog-img-2.png"
-                    srcset="img/catalog-img-2@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="84"
-                    height="100"
-                  />
-                </picture>
+                    <source
+                      class="product__img img-2"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-2.png    1x,
+                        img/catalog-img-tablet-2@2x.png 2x
+                      "
+                      width="168"
+                      height="206"
+                    />
+                    <img
+                      class="product__img img-2"
+                      src="img/catalog-img-2.png"
+                      srcset="img/catalog-img-2@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="84"
+                      height="100"
+                    /> </picture
+                ></a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
-                  Cat Energy PRO 1000 г
-                </h2>
+                <a class="product__name-link" href="#"
+                  ><h2 class="product__name heading heading--small">
+                    Cat Energy PRO 1000 г
+                  </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -254,7 +262,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -262,53 +270,57 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    class="product__img img-3"
-                    type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-3.webp    1x,
-                      img/catalog-img-tablet-3@2x.webp 2x
-                    "
-                    width="163"
-                    height="174"
-                  />
-                  <source
-                    class="product__img img-3"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-3.webp    1x,
-                      img/catalog-img-3@2x.webp 2x
-                    "
-                    width="68"
-                    height="78"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      class="product__img img-3"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-3.webp    1x,
+                        img/catalog-img-tablet-3@2x.webp 2x
+                      "
+                      width="163"
+                      height="174"
+                    />
+                    <source
+                      class="product__img img-3"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-3.webp    1x,
+                        img/catalog-img-3@2x.webp 2x
+                      "
+                      width="68"
+                      height="78"
+                    />
 
-                  <source
-                    class="product__img img-3"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-3.png    1x,
-                      img/catalog-img-tablet-3@2x.png 2x
-                    "
-                    width="163"
-                    height="174"
-                  />
-                  <img
-                    class="product__img img-3"
-                    src="img/catalog-img-3.png"
-                    srcset="img/catalog-img-3@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="68"
-                    height="78"
-                  />
-                </picture>
+                    <source
+                      class="product__img img-3"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-3.png    1x,
+                        img/catalog-img-tablet-3@2x.png 2x
+                      "
+                      width="163"
+                      height="174"
+                    />
+                    <img
+                      class="product__img img-3"
+                      src="img/catalog-img-3.png"
+                      srcset="img/catalog-img-3@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="68"
+                      height="78"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
-                  Cat Energy PRO 500 г
-                </h2>
+                <a class="product__name-link" href="#"
+                  ><h2 class="product__name heading heading--small">
+                    Cat Energy PRO 500 г
+                  </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -324,7 +336,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -332,51 +344,55 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-tablet-4.webp    1x,
-                      img/catalog-img-tablet-4@2x.webp 2x
-                    "
-                    width="168"
-                    height="200"
-                  />
-                  <source
-                    class="product__img img-4"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-4.webp    1x,
-                      img/catalog-img-4@2x.webp 2x
-                    "
-                    width="84"
-                    height="100"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-tablet-4.webp    1x,
+                        img/catalog-img-tablet-4@2x.webp 2x
+                      "
+                      width="168"
+                      height="200"
+                    />
+                    <source
+                      class="product__img img-4"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-4.webp    1x,
+                        img/catalog-img-4@2x.webp 2x
+                      "
+                      width="84"
+                      height="100"
+                    />
 
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-4.png    1x,
-                      img/catalog-img-tablet-4@2x.png 2x
-                    "
-                    width="168"
-                    height="200"
-                  />
-                  <img
-                    class="product__img img-4"
-                    src="img/catalog-img-4.png"
-                    srcset="img/catalog-img-4@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="84"
-                    height="100"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-4.png    1x,
+                        img/catalog-img-tablet-4@2x.png 2x
+                      "
+                      width="168"
+                      height="200"
+                    />
+                    <img
+                      class="product__img img-4"
+                      src="img/catalog-img-4.png"
+                      srcset="img/catalog-img-4@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="84"
+                      height="100"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
-                  Cat Energy PRO 1000 г
-                </h2>
+                <a class="product__name-link" href="#"
+                  ><h2 class="product__name heading heading--small">
+                    Cat Energy PRO 1000 г
+                  </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -392,7 +408,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -400,52 +416,56 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    class="product__img img-5"
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-tablet-5.webp    1x,
-                      img/catalog-img-tablet-5@2x.webp 2x
-                    "
-                    width="161"
-                    height="171"
-                  />
-                  <source
-                    class="product__img img-5"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-5.webp    1x,
-                      img/catalog-img-5@2x.webp 2x
-                    "
-                    width="68"
-                    height="78"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      class="product__img img-5"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-tablet-5.webp    1x,
+                        img/catalog-img-tablet-5@2x.webp 2x
+                      "
+                      width="161"
+                      height="171"
+                    />
+                    <source
+                      class="product__img img-5"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-5.webp    1x,
+                        img/catalog-img-5@2x.webp 2x
+                      "
+                      width="68"
+                      height="78"
+                    />
 
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-5.png    1x,
-                      img/catalog-img-tablet-5@2x.png 2x
-                    "
-                    width="161"
-                    height="171"
-                  />
-                  <img
-                    class="product__img img-5"
-                    src="img/catalog-img-5.png"
-                    srcset="img/catalog-img-5@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="68"
-                    height="78"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-5.png    1x,
+                        img/catalog-img-tablet-5@2x.png 2x
+                      "
+                      width="161"
+                      height="171"
+                    />
+                    <img
+                      class="product__img img-5"
+                      src="img/catalog-img-5.png"
+                      srcset="img/catalog-img-5@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="68"
+                      height="78"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
-                  Cat Energy SLIM 500 г
-                </h2>
+                <a class="product__name-link" href="#"></a>
+                  <h2 class="product__name heading heading--small">
+                    Cat Energy SLIM 500 г
+                  </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -461,7 +481,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -469,53 +489,57 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    class="product__img img-6"
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-tablet-6.webp    1x,
-                      img/catalog-img-tablet-6@2x.webp 2x
-                    "
-                    width="168"
-                    height="200"
-                  />
-                  <source
-                    class="product__img img-6"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-6.webp    1x,
-                      img/catalog-img-6@2x.webp 2x
-                    "
-                    width="84"
-                    height="100"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      class="product__img img-6"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-tablet-6.webp    1x,
+                        img/catalog-img-tablet-6@2x.webp 2x
+                      "
+                      width="168"
+                      height="200"
+                    />
+                    <source
+                      class="product__img img-6"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-6.webp    1x,
+                        img/catalog-img-6@2x.webp 2x
+                      "
+                      width="84"
+                      height="100"
+                    />
 
-                  <source
-                    class="product__img img-6"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-6.png    1x,
-                      img/catalog-img-tablet-6@2x.png 2x
-                    "
-                    width="168"
-                    height="200"
-                  />
-                  <img
-                    class="product__img img-6"
-                    src="img/catalog-img-6.png"
-                    srcset="img/catalog-img-6@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="84"
-                    height="100"
-                  />
-                </picture>
+                    <source
+                      class="product__img img-6"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-6.png    1x,
+                        img/catalog-img-tablet-6@2x.png 2x
+                      "
+                      width="168"
+                      height="200"
+                    />
+                    <img
+                      class="product__img img-6"
+                      src="img/catalog-img-6.png"
+                      srcset="img/catalog-img-6@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="84"
+                      height="100"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
+                <a class="product__name-link" href="#"
+                    ><h2 class="product__name heading heading--small">
                   Cat Energy SLIM 1000 г
-                </h2>
+                </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -531,7 +555,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -539,55 +563,59 @@
           <li class="product__item">
             <div class="product__item-container">
               <div class="product__img-frame">
-                <picture>
-                  <source
-                    class="product__img img-7"
-                    type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-7.webp    1x,
-                      img/catalog-img-tablet-7@2x.webp 2x
-                    "
-                    width="163"
-                    height="174"
-                  />
+                <a class="product__img-link" href="#">
+                  <picture>
+                    <source
+                      class="product__img img-7"
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-7.webp    1x,
+                        img/catalog-img-tablet-7@2x.webp 2x
+                      "
+                      width="163"
+                      height="174"
+                    />
 
-                  <source
-                    class="product__img img-7"
-                    type="image/webp"
-                    srcset="
-                      img/catalog-img-7.webp    1x,
-                      img/catalog-img-7@2x.webp 2x
-                    "
-                    width="72"
-                    height="84"
-                  />
+                    <source
+                      class="product__img img-7"
+                      type="image/webp"
+                      srcset="
+                        img/catalog-img-7.webp    1x,
+                        img/catalog-img-7@2x.webp 2x
+                      "
+                      width="72"
+                      height="84"
+                    />
 
-                  <source
-                    class="product__img img-7"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/catalog-img-tablet-7.png    1x,
-                      img/catalog-img-tablet-7@2x.png 2x
-                    "
-                    width="163"
-                    height="174"
-                  />
+                    <source
+                      class="product__img img-7"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog-img-tablet-7.png    1x,
+                        img/catalog-img-tablet-7@2x.png 2x
+                      "
+                      width="163"
+                      height="174"
+                    />
 
-                  <img
-                    class="product__img img-7"
-                    src="img/catalog-img-7.png"
-                    srcset="img/catalog-img-7@2x.png 2x"
-                    alt="CAT Energy pro 500g"
-                    width="72"
-                    height="84"
-                  />
-                </picture>
+                    <img
+                      class="product__img img-7"
+                      src="img/catalog-img-7.png"
+                      srcset="img/catalog-img-7@2x.png 2x"
+                      alt="CAT Energy pro 500g"
+                      width="72"
+                      height="84"
+                    />
+                  </picture>
+                </a>
               </div>
               <div class="product__wrapper">
-                <h2 class="product__name heading-small">
+                <a class="product__name-link" href="#"
+                > <h2 class="product__name heading heading--small">
                   Cat Energy SLIM 500 г
-                </h2>
+                </h2></a
+                >
                 <ul class="product__info info">
                   <li class="info__item">
                     <span class="info__title">Масса</span>
@@ -603,7 +631,7 @@
                   </li>
                 </ul>
               </div>
-              <a class="product__button button-primary" href="form.html"
+              <a class="product__button button button--primary" href="form.html"
                 >Заказать</a
               >
             </div>
@@ -611,10 +639,10 @@
           <li class="product__show-all show-all">
             <div class="show-all__container">
               <p class="show-all__lead">Показать еще 100500 товаров</p>
-              <p class="show-all__text catalog-basic-text">
+              <p class="show-all__text basic-text basic-text--catalog">
                 На самом деле вкусов гораздо больше!
               </p>
-              <a class="show-all__button button-secondary" href="#">
+              <a class="show-all__button button button--secondary" href="#">
                 Показать все
               </a>
             </div>
@@ -628,41 +656,47 @@
             <ul class="additional__list">
               <li class="additional__item add-info">
                 <h3 class="add-info__name">Сахарозаменитель</h3>
-                <div class="add-info__wrapper">
-                  <span class="add-info__volume">1 упаковка (100 г)</span>
-                  <span class="add-info__value">200 ₽</span>
-                </div>
-                <a class="add-info__button button-primary" href="form.html"
+
+                <span class="add-info__volume">1 упаковка (100 г)</span>
+                <span class="add-info__value">200 ₽</span>
+
+                <a
+                  class="add-info__button button button--primary"
+                  href="form.html"
                   >Заказать</a
                 >
               </li>
               <li class="additional__item add-info">
                 <h3 class="add-info__name">Питьевая вода</h3>
-                <div class="add-info__wrapper">
-                  <span class="add-info__volume">5 литров</span>
-                  <span class="add-info__value">50 ₽</span>
-                </div>
-                <a class="add-info__button button-primary" href="form.html"
+
+                <span class="add-info__volume">5 литров</span>
+                <span class="add-info__value">50 ₽</span>
+
+                <a
+                  class="add-info__button button button--primary"
+                  href="form.html"
                   >Заказать</a
                 >
               </li>
               <li class="additional__item add-info">
                 <h3 class="add-info__name">Молоко</h3>
-                <div class="add-info__wrapper">
-                  <span class="add-info__valume">1 литр</span>
-                  <span class="add-info__value">100 ₽</span>
-                </div>
-                <a class="add-info__button button-primary" href="form.html"
+
+                <span class="add-info__volume">1 литр</span>
+                <span class="add-info__value">100 ₽</span>
+
+                <a
+                  class="add-info__button button button--primary"
+                  href="form.html"
                   >Заказать</a
                 >
               </li>
               <li class="additional__item add-info">
                 <h3 class="add-info__name">Витамины</h3>
-                <div class="add-info__wrapper">
-                  <span class="add-info__volume">1 упаковка (30 г)</span>
-                  <span class="add-info__value">300 ₽</span>
-                </div>
-                <a class="add-info__button button-primary" href="form.html"
+                <span class="add-info__volume">1 упаковка (30 г)</span>
+                <span class="add-info__value">300 ₽</span>
+                <a
+                  class="add-info__button button button--primary"
+                  href="form.html"
                   >заказать</a
                 >
               </li>
@@ -679,7 +713,7 @@
 
       <section class="catalog__offer offer">
         <div class="offer__wrapper">
-          <h2 class="offer__title heading-small">
+          <h2 class="offer__title heading heading--small">
             Приглашаем <br />
             к сотрудничеству дилеров!
           </h2>
@@ -699,9 +733,9 @@
         </div>
       </section>
     </main>
-    <footer class="body-catalog__footer footer">
+    <footer class="body__footer footer">
       <div class="footer__content">
-        <div class="footer__logo-text logo-text">
+        <a class="footer__logo-text logo-text" href="index.html">
           <img
             class="logo-text__img"
             src="img/logo-text.svg"
@@ -709,42 +743,45 @@
             width="128"
             height="24"
           />
-        </div>
+        </a>
         <ul class="footer__social-link social-link">
           <li class="social-link__item">
-            <span class="visually-hidden">VK</span>
-            <a href="#" class="social-link__vk"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">VK</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="27"
                 height="17"
                 fill="#666666"
+                aria-label="VK Icon"
               >
                 <use xlink:href="#vk-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Youtube</span
-            ><a href="#" class="social-link__youtube"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Youtube</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="24"
                 height="19"
                 fill="#666666"
+                aria-label="Youtube Icon"
               >
                 <use xlink:href="#youtube-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Telegram</span
-            ><a href="#" class="social-link__telegram"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Telegram</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="20"
                 height="18"
                 fill="#666666"
+                aria-label="Telegram Icon"
               >
                 <use xlink:href="#telegram-icon"></use>
               </svg>
@@ -762,6 +799,7 @@
             width="27"
             height="35"
             fill="#666666"
+            aria-label="HTML Academy Icon"
           >
             <use xlink:href="#htmlacademy-icon"></use></svg
         ></a>

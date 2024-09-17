@@ -1,59 +1,96 @@
 .header {
-  .center-horizontal();
-
-  width: 279px;
-  display: flex;
-  align-items: center;
-  padding: 13px 0 12px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 704px;
-    min-height: 50px;
-    padding: 25px 0 60px;
+    display: flex;
+    padding: 25px 0 65px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    min-height: 59px;
-    padding: 54px 0 28px;
+    padding: 55px 0 29px;
   }
 
-  & .logo-text__img {
+  &__logo-container {
+    width: 280px;
+    margin: 0 auto;
+    padding: 13px 0 14px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      width: 174px;
+      margin: 0;
+      margin-left: auto;
+      padding: 0;
+      margin-right: 94px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 202px;
+      margin-right: 543px;
+    }
+  }
+
+  &__logo {
+    margin-right: 56px;
+  }
+
+  &__logo-text {
+    margin-right: 65px;
+
     @media (min-width: @tablet-width) {
       display: none;
     }
   }
-}
 
-.header__logo {
-  margin-right: 56px;
+  &__logo-image {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
 
-  @media (min-width: @tablet-width) {
-    margin-right: 0;
-  }
-}
+    &:hover {
+      opacity: 0.8;
+    }
 
-.logo-image,
-.logo-text__img {
-  transition: opacity 0.5s ease-in-out;
+    &:focus {
+      opacity: 0.6;
+    }
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    opacity: 0.6;
+    &:active {
+      opacity: 0.6;
+    }
   }
 
-  &:active {
-    opacity: 0.6;
+  &__logo-text-img {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
-}
 
-.logo-text__img {
-  display: block;
-}
+  &__hamburger {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+  }
 
-.header__nav {
-  margin-left: auto;
+  &__hamburger--open {
+    background-image: url("../img/logo-close-icon.svg");
+  }
+
+  &__hamburger--close {
+    background-image: url("../img/logo-hamburger.svg");
+  }
 }

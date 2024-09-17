@@ -1,14 +1,21 @@
 .cat-transform {
   position: relative;
   display: flex;
+  width: 280px;
+  height: 256px;
 
   @media (min-width: @tablet-width) {
     position: relative;
     justify-content: center;
+    width: 560px;
+    height: 512px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     background: none;
+    margin: 0;
     padding: 0;
     width: 560px;
     height: 512px;
@@ -17,7 +24,26 @@
   }
 
   &__image {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__left-image {
+    clip: rect(0, 140px, 256px, 0);
+    @media (min-width: @tablet-width) {
+      clip: rect(0, 280px, 512px, 0);
+    }
+  }
+
+  &__right-image {
+    clip: rect(0, 280px, 256px, 140px);
+    @media (min-width: @tablet-width) {
+      clip: rect(0, 560px, 512px, 280px);
+    }
   }
 
   &__control {
@@ -31,6 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     transition: background-color 0.5s ease-in;
 
     &:has(.cat-transform__control-button:hover) {
