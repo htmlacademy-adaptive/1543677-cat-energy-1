@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body body">
     <svg style="display: none">
       <symbol viewBox="0 0 27 17" id="vk-icon">
         <path
@@ -69,50 +69,54 @@
       </symbol>
     </svg>
     <header class="body__header header">
-      <a class="header__logo logo-1" href="#">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="img/logo-desktop.svg"
-            width="202"
-            height="59"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="img/logo-tablet.svg"
-            width="174"
-            height="50"
-          />
+      <div class="header__logo-container">
+        <a class="header__logo" href="#">
+          <picture>
+            <source
+              class="header__logo-image"
+              media="(min-width: 1440px)"
+              srcset="img/logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              class="header__logo-image"
+              media="(min-width: 768px)"
+              srcset="img/logo-tablet.svg"
+              width="174"
+              height="50"
+            />
+            <img
+              class="header__logo-image"
+              src="img/logo.svg"
+              alt="Логотип"
+              width="33"
+              height="38"
+            />
+          </picture>
+        </a>
+        <a class="header__logo-text" href="index.html">
           <img
-            class="logo-image"
-            src="img/logo.svg"
-            alt="Логотип"
-            width="33"
-            height="38"
+            class="header__logo-text-img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
           />
-        </picture>
-      </a>
-      <img
-        class="logo-text__img"
-        src="img/logo-text.svg"
-        alt="CAT Energy"
-        width="101"
-        height="18"
-      />
-      <nav class="header__nav main-nav">
-        <input
-          id="hamburger"
-          class="main-nav__input visually-hidden"
-          type="checkbox"
-        />
-        <label for="hamburger" class="main-nav__hamburger">
+        </a>
+        <button
+          type="button"
+          class="header__hamburger header__hamburger--close"
+        >
           <span class="visually-hidden">Кнопка гамбургер</span>
-        </label>
+        </button>
+      </div>
+      <nav class="header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a
               href="#"
-              class="main-nav__link main-nav__link--color nav-link-active"
+              class="main-nav__link main-nav__link--color main-nav__link--active"
               >Главная</a
             >
           </li>
@@ -133,7 +137,7 @@
       <section class="main__hero hero">
         <div class="hero__content">
           <div class="hero__texts">
-            <h1 class="hero__title heading-large-tight">
+            <h1 class="hero__title heading heading--large_tight">
               Функциональное питание для котов
             </h1>
             <p class="hero__lead">Занялся собой? Займись котом!</p>
@@ -199,7 +203,7 @@
             </picture>
           </div>
 
-          <a class="hero__button button-primary" href="#"
+          <a class="hero__button button button--primary" href="#"
             >Подобрать программу</a
           >
         </div>
@@ -210,61 +214,61 @@
           <li class="programs__item">
             <div class="programs__wrapper">
               <div class="programs__icon-1"></div>
-              <h2 class="programs__title heading-medium-loose">Похудение</h2>
+              <h2 class="programs__title heading heading--medium_loose">
+                Похудение
+              </h2>
             </div>
-            <p class="programs__text index-basic-text">
+            <p class="programs__text basic-text basic-text--index">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
             <a class="programs__link" href="#">
               <span class="programs__link-text">Каталог slim</span>
-              <div class="programs__link-icon">
-                <span class="visually-hidden">стрела ссылки</span>
-              </div>
             </a>
           </li>
           <li class="programs__item">
             <div class="programs__wrapper">
               <div class="programs__icon-2"></div>
-              <h2 class="programs__title heading-medium-loose">Набор массы</h2>
+              <h2 class="programs__title heading heading--medium_loose">
+                Набор массы
+              </h2>
             </div>
-            <p class="programs__text index-basic-text">
+            <p class="programs__text basic-text basic-text--index">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a class="programs__link" href="catalog.html">
               <span class="programs__link-text">каталог pro</span>
-              <div class="programs__link-icon">
-                <span class="visually-hidden">стрела ссылки</span>
-              </div>
             </a>
           </li>
         </ul>
       </section>
       <section class="main__features features">
-        <h2 class="features__title heading-large-loose">Как это работает</h2>
+        <h2 class="features__title heading heading--large_loose">
+          Как это работает
+        </h2>
         <ul class="features__list">
           <li class="features__item features__item-img-1">
-            <p class="features__text index-basic-text">
+            <p class="features__text basic-text basic-text--index">
               Функциональное питание содержит только полезные питательные
               вещества.
             </p>
           </li>
           <li class="features__item features__item-img-2">
-            <p class="features__text index-basic-text">
+            <p class="features__text basic-text basic-text--index">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
           </li>
           <li class="features__item features__item-img-3">
-            <p class="features__text index-basic-text">
+            <p class="features__text basic-text basic-text--index">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
           </li>
           <li class="features__item features__item-img-4">
-            <p class="features__text index-basic-text">
+            <p class="features__text basic-text basic-text--index">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
             </p>
@@ -273,8 +277,10 @@
       </section>
       <section class="main__real-case real-case">
         <div class="real-case__content">
-          <h2 class="real-case__title heading-large-loose">Живой пример</h2>
-          <p class="real-case__text index-basic-text">
+          <h2 class="real-case__title heading heading--large_loose">
+            Живой пример
+          </h2>
+          <p class="real-case__text basic-text basic-text--index">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
             Cat Energy Slim. Отличный результат <br />
             без изнуряющих тренировок! При этом он не менял своих привычек и
@@ -302,34 +308,34 @@
           <div class="real-case__cat-transform cat-transform">
             <picture>
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 type="image/webp"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-b.webp 1x, img/cat-trans-t-b@2x.webp 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 type="image/webp"
                 srcset="img/cat-trans-m-b.webp 1x, img/cat-trans-m-b@2x.webp 2x"
-                width="140"
+                width="280"
                 height="256"
               />
 
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-b.png 1x, img/cat-trans-t-b@2x.png 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <img
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__left-image"
                 src="img/cat-trans-m-b.png"
                 srcset="img/cat-trans-m-b@2x.png 2x"
                 alt="Жырный кот"
-                width="140"
+                width="280"
                 height="256"
               />
             </picture>
@@ -342,44 +348,43 @@
             </div>
             <picture>
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 type="image/webp"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-s.webp 1x, img/cat-trans-t-s@2x.webp 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 type="image/webp"
                 srcset="img/cat-trans-m-s.webp 1x, img/cat-trans-m-s@2x.webp 2x"
-                width="140"
+                width="280"
                 height="256"
               />
 
               <source
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 media="(min-width: 768px)"
                 srcset="img/cat-trans-t-s.png 1x, img/cat-trans-t-s@2x.png 2x"
-                width="280"
+                width="560"
                 height="512"
               />
               <img
-                class="cat-transform__image"
+                class="cat-transform__image cat-transform__right-image"
                 src="img/cat-trans-m-s.png"
                 srcset="img/cat-trans-m-s@2x.png 2x"
                 alt="Нормальный кот"
-                width="140"
+                width="280"
                 height="256"
               />
             </picture>
           </div>
         </div>
       </section>
-
       <section class="main__offer offer">
         <div class="offer__wrapper">
-          <h2 class="offer__title heading-small">
+          <h2 class="offer__title heading heading--small">
             Приглашаем <br />
             к сотрудничеству дилеров!
           </h2>
@@ -401,7 +406,7 @@
     </main>
     <footer class="body__footer footer">
       <div class="footer__content">
-        <div class="footer__logo-text logo-text">
+        <a class="footer__logo-text logo-text" href="index.html">
           <img
             class="logo-text__img"
             src="img/logo-text.svg"
@@ -409,13 +414,13 @@
             width="128"
             height="24"
           />
-        </div>
+        </a>
         <ul class="footer__social-link social-link">
           <li class="social-link__item">
-            <span class="visually-hidden">VK</span>
-            <a href="#" class="social-link__vk"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">VK</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="27"
                 height="17"
                 fill="#666666"
@@ -425,10 +430,10 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Youtube</span
-            ><a href="#" class="social-link__youtube"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Youtube</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="24"
                 height="19"
                 fill="#666666"
@@ -438,10 +443,10 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Telegram</span
-            ><a href="#" class="social-link__telegram"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Telegram</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="20"
                 height="18"
                 fill="#666666"

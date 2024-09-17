@@ -103,19 +103,28 @@
 
   &__input {
     padding: 14px 15px 13px 14px;
-    color: @special_grey-2;
-    border: 1px solid @special_grey;
+    color: #444444;
+    border: 1px solid #e7e7e7;
     outline: none;
     flex-grow: 1;
     transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
     &:hover {
-      color: @color-special_dark-gray;
-      border-color: @special_grey-2;
+      border-color: #cdcdcd;
     }
 
-    &:hover ~ .contacts__input-icon {
+    &:focus {
+      border-color: rgba(#cdcdcd, 0.1);
+      box-shadow: 0 0 0 2px #444444;
+    }
+
+    &:focus ~ .contacts__input-icon {
       stroke: @basic_green;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: rgba(@color-special_dark-gray, 0);
+      box-shadow: 0 0 0 2px #ff8282;
     }
 
     @media (min-width: @tablet-width) {
@@ -129,6 +138,9 @@
     top: 50%;
     transform: translateY(-50%);
     transition: stroke 0.5s ease-in-out;
+    &.contacts__input-icon--error {
+      stroke: #ff8282;
+    }
 
     @media (min-width: @tablet-width) {
       right: 14px;

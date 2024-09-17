@@ -104,7 +104,7 @@
     position: relative;
     width: 30px;
     height: 30px;
-    border: 1px solid @special_grey;
+    border: 1px solid #cdcdcd;
     transition: border-color 0.5s ease-in-out;
 
     @media (min-width: @tablet-width) {
@@ -130,11 +130,11 @@
   }
 
   &__input:hover ~ .extra__square {
-    border-color: @special_grey-2;
+    border-color: #bababa;
   }
 
   &__input:disabled ~ .extra__square,
-  &__input:disabled ~ .form-basic-text {
+  &__input:disabled ~ .basic-text {
     opacity: 0.3;
     border-color: @special_grey-2;
   }

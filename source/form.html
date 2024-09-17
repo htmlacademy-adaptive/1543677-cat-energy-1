@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body body">
     <svg style="display: none">
       <symbol viewBox="0 0 27 17" id="vk-icon">
         <path
@@ -64,46 +64,47 @@
       </symbol>
     </svg>
     <header class="body__header header">
-      <a class="header__logo logo-1" href="/">
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="img/logo-desktop.svg"
-            width="202"
-            height="59"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="img/logo-tablet.svg"
-            width="174"
-            height="50"
-          />
+      <div class="header__logo-container">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source
+              class="header__logo-image"
+              media="(min-width: 1440px)"
+              srcset="img/logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              class="header__logo-image"
+              media="(min-width: 768px)"
+              srcset="img/logo-tablet.svg"
+              width="174"
+              height="50"
+            />
+            <img
+              class="header__logo-image"
+              src="img/logo.svg"
+              alt="Логотип"
+              width="33"
+              height="38"
+            />
+          </picture>
+        </a>
+        <a class="header__logo-text" href="index.html">
           <img
-            class="logo-image"
-            src="img/logo.svg"
-            alt="Логотип"
-            width="33"
-            height="38"
+            class="header__logo-text-img"
+            src="img/logo-text.svg"
+            alt="CAT Energy"
+            width="101"
+            height="18"
           />
-        </picture>
-      </a>
-      <img
-        class="logo-text__img"
-        src="img/logo-text.svg"
-        alt="CAT Energy"
-        width="101"
-        height="18"
-      />
-      <nav class="header__nav main-nav">
-        <input
-          id="hamburger"
-          class="main-nav__input visually-hidden"
-          type="checkbox"
-        />
-        <label for="hamburger" class="main-nav__hamburger">
+        </a>
+        <button type="button" class="header__hamburger header__hamburger--open">
           <span class="visually-hidden">Кнопка гамбургер</span>
-        </label>
-        <ul class="main-nav__list main-nav__list-form">
+        </button>
+      </div>
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html" class="main-nav__link">Главная</a>
           </li>
@@ -111,7 +112,7 @@
             <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link nav-link-active"
+            <a href="#" class="main-nav__link main-nav__link--active"
               >Подбор программы</a
             >
           </li>
@@ -119,7 +120,9 @@
       </nav>
     </header>
     <main class="body__main form-main">
-      <h1 class="form-main__title heading-large-tight">Подбор программы</h1>
+      <h1 class="form-main__title heading heading--large_tight">
+        Подбор программы
+      </h1>
       <p class="form-main__lead">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
@@ -127,24 +130,31 @@
         <fieldset class="form__about-cat about-cat">
           <ul class="about-cat__list">
             <li class="about-cat__item">
-              <label for="name" class="about-cat__control form-basic-text">
+              <label
+                for="name"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 ИМЯ:
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="text"
                 name="name"
                 id="name"
                 placeholder="барсик"
                 required
+                invalid
               />
             </li>
             <li class="about-cat__item">
-              <label for="mass" class="about-cat__control form-basic-text">
+              <label
+                for="mass"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 Вес (кг):
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="number"
                 name="mass"
                 id="mass"
@@ -155,11 +165,14 @@
               />
             </li>
             <li class="about-cat__item">
-              <label for="age" class="about-cat__control form-basic-text">
+              <label
+                for="age"
+                class="about-cat__control basic-text basic-text--form"
+              >
                 Возраст (лет):
               </label>
               <input
-                class="about-cat__input form-basic-text"
+                class="about-cat__input basic-text basic-text--form"
                 type="number"
                 name="age"
                 id="age"
@@ -184,7 +197,7 @@
                   checked
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Похудение</span>
+                <span class="basic-text basic-text--form">Похудение</span>
               </label>
             </li>
             <li class="looks__item">
@@ -197,7 +210,7 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Набор массы</span>
+                <span class="basic-text basic-text--form">Набор массы</span>
               </label>
             </li>
             <li class="looks__item">
@@ -210,22 +223,27 @@
                   name="diet"
                 />
                 <span class="looks__circle"></span>
-                <span class="form-basic-text">Не знаю (Нужен ваш совет)</span>
+                <span class="basic-text basic-text--form"
+                  >Не знаю (Нужен ваш совет)</span
+                >
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__contacts contacts">
-          <h2 class="contacts__title heading-medium-tight">
+          <h2 class="contacts__title heading heading--medium_tight">
             Контактные данные (владельца кота)
           </h2>
           <ul class="contacts__list">
             <li class="contacts__item">
-              <label for="email" class="contacts__control form-basic-text">
+              <label
+                for="email"
+                class="contacts__control basic-text basic-text--form"
+              >
                 E-mail:
               </label>
               <input
-                class="contacts__input form-basic-text"
+                class="contacts__input basic-text basic-text--form"
                 type="email"
                 name="email"
                 id="email"
@@ -249,11 +267,14 @@
               </svg>
             </li>
             <li class="contacts__item">
-              <label for="phone-num" class="contacts__control form-basic-text">
+              <label
+                for="phone-num"
+                class="contacts__control basic-text basic-text--form"
+              >
                 Телефон:
               </label>
               <input
-                class="contacts__input form-basic-text"
+                class="contacts__input basic-text basic-text--form"
                 type="tel"
                 name="phone-num"
                 id="phone-num"
@@ -279,16 +300,20 @@
           </ul>
         </fieldset>
         <fieldset class="form__comment comment">
-          <h2 class="comment__title heading-medium-tight">Комментарий</h2>
+          <h2 class="comment__title heading heading--medium_tight">
+            Комментарий
+          </h2>
           <textarea
-            class="comment__textarea form-basic-text"
+            class="comment__textarea basic-text basic-text--form"
             name="comment__text"
           >
 Расскажите обо всех повaдках кота</textarea
           >
         </fieldset>
         <fieldset class="form__extra extra">
-          <h2 class="extra__title heading-medium-tight">Дополнительно</h2>
+          <h2 class="extra__title heading heading--medium_tight">
+            Дополнительно
+          </h2>
           <ul class="extra__list">
             <li class="extra__item">
               <label for="sweetener" class="extra__control">
@@ -299,9 +324,12 @@
                   value="sweetener"
                   id="sweetener"
                   checked
+                  disabled
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Сахарозаменитель</span>
+                <span class="basic-text basic-text--form"
+                  >Сахарозаменитель</span
+                >
               </label>
             </li>
             <li class="extra__item">
@@ -315,7 +343,7 @@
                   checked
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Питьевая вода</span>
+                <span class="basic-text basic-text--form">Питьевая вода</span>
               </label>
             </li>
             <li class="extra__item">
@@ -328,7 +356,7 @@
                   id="milk"
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Молоко</span>
+                <span class="basic-text basic-text--form">Молоко</span>
               </label>
             </li>
             <li class="extra__item">
@@ -341,13 +369,13 @@
                   id="vitamin"
                 />
                 <span class="extra__square"></span>
-                <span class="form-basic-text">Витамины</span>
+                <span class="basic-text basic-text--form">Витамины</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <div class="form__wrapper">
-          <button type="submit" class="form__button button-primary">
+          <button type="submit" class="form__button button button--primary">
             Отправить заявку
           </button>
           <p class="form__text">— Обязательные поля</p>
@@ -355,7 +383,7 @@
       </form>
       <section class="form-main__offer offer">
         <div class="offer__wrapper">
-          <h2 class="offer__title heading-small">
+          <h2 class="offer__title heading heading--small">
             Приглашаем <br />
             к сотрудничеству дилеров!
           </h2>
@@ -375,9 +403,9 @@
         </div>
       </section>
     </main>
-    <footer class="body-form__footer footer">
+    <footer class="body__footer footer">
       <div class="footer__content">
-        <div class="footer__logo-text logo-text">
+        <a class="footer__logo-text logo-text" href="index.html">
           <img
             class="logo-text__img"
             src="img/logo-text.svg"
@@ -385,13 +413,13 @@
             width="128"
             height="24"
           />
-        </div>
+        </a>
         <ul class="footer__social-link social-link">
           <li class="social-link__item">
-            <span class="visually-hidden">VK</span>
-            <a href="#" class="social-link__vk"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">VK</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="27"
                 height="17"
                 fill="#666666"
@@ -401,10 +429,10 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Youtube</span
-            ><a href="#" class="social-link__youtube"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Youtube</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="24"
                 height="19"
                 fill="#666666"
@@ -414,10 +442,10 @@
             </a>
           </li>
           <li class="social-link__item">
-            <span class="visually-hidden">Telegram</span
-            ><a href="#" class="social-link__telegram"
+            <a href="#" class="social-link__icon"
+              ><span class="visually-hidden">Telegram</span
               ><svg
-                class="social-link__icon"
+                class="social-link__icon-svg"
                 width="20"
                 height="18"
                 fill="#666666"

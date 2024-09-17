@@ -58,12 +58,18 @@
 
     &:focus {
       color: @color-special_dark-gray;
-      border-color: @color-special_dark-gray;
+      border-color: @color-special_dark-gray rgba(@color-special_dark-gray, 0.9);
+      box-shadow: 0 0 0 2px @color-special_dark-gray;
     }
 
     &:active {
       color: @color-special_dark-gray;
       border-color: @color-special_dark-gray;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: rgba(@color-special_dark-gray, 0);
+      box-shadow: 0 0 0 2px #ff8282;
     }
 
     @media (min-width: @tablet-width) {

@@ -41,6 +41,7 @@
       position: static;
       gap: 62px;
       margin-bottom: 40px;
+      //flex-wrap: wrap;
     }
   }
 
@@ -48,13 +49,22 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: 130px;
+    background-image: url("../img/icon-arrow.svg");
+    background-position: center right 8px;
+    background-repeat: no-repeat;
+    transition: background-position 0.5s ease-in-out;
 
-    &:hover .programs__link-icon {
-      margin-left: 0;
+    @media (min-width: @tablet-width) {
+      width: 165px;
     }
 
-    &:active .programs__link-icon {
-      margin-left: 0;
+    &:hover {
+      background-position: center right;
+    }
+
+    &:active {
+      background-position: center right;
     }
 
     &:active {
@@ -175,6 +185,11 @@
 
   &__title {
     text-transform: uppercase;
+    max-width: 137px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 206px;
+    }
 
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
@@ -201,30 +216,17 @@
 
   &__link-text {
     .font-oswald(16px, 16px);
+
+    width: 98px;
     color: @color-black;
     text-decoration: none;
     text-transform: uppercase;
-    padding-right: 15px;
     background-color: #f2f2f2;
-    position: relative;
-    z-index: 3;
 
     @media (min-width: @tablet-width) {
       .font-oswald(20px, 30px);
 
-      padding-right: 25px;
+      width: 133px;
     }
-  }
-
-  &__link-icon {
-    transition: margin-left 0.5s ease-in-out;
-    width: 32px;
-    height: 12px;
-    background-image: url("../img/icon-arrow.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: -4px;
-    position: relative;
-    z-index: 1;
   }
 }
