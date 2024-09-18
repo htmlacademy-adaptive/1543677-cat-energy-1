@@ -63,6 +63,7 @@
   }
 
   &__list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -75,7 +76,6 @@
     }
 
     @media (min-width: @desktop-width) {
-      width: 1220px;
       flex-direction: row;
       gap: 80px;
       margin-bottom: 0;
@@ -83,7 +83,9 @@
   }
 
   &__item {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     column-gap: 13px;
     position: relative;
@@ -94,8 +96,10 @@
   }
 
   &__control {
-    flex-shrink: 0;
-
+    max-width: 67px;
+    @media (min-width: @tablet-width) {
+      max-width: 85px;
+    }
     &::after {
       content: "*";
     }
@@ -106,7 +110,6 @@
     color: #444444;
     border: 1px solid #e7e7e7;
     outline: none;
-    flex-grow: 1;
     transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
     &:hover {
