@@ -25,7 +25,8 @@
   }
 
   &__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 13px;
   }
@@ -33,7 +34,7 @@
   &__control {
     text-transform: uppercase;
     color: @color-special_dark-gray;
-    flex-shrink: 0;
+    max-width: 117px;
   }
 
   &__item:not(:last-child) .about-cat__control::after {
