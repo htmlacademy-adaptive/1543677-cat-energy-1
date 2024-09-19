@@ -43,6 +43,14 @@
     }
   }
 
+  &__logo-text-img {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   &__logo-image {
     display: block;
     transition: opacity 0.5s ease-in-out;
@@ -84,6 +92,10 @@
     background-position: center;
     background-color: transparent;
     border: none;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   &__hamburger--open {
