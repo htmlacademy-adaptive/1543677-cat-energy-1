@@ -134,6 +134,11 @@
     border-color: #bababa;
   }
 
+  &__input:focus ~ .extra__square {
+    border-color: rgba(#bababa, 0.5);
+    box-shadow: 0 0 0 2px #bababa;
+  }
+
   &__input:disabled ~ .extra__square,
   &__input:disabled ~ .basic-text {
     opacity: 0.3;
