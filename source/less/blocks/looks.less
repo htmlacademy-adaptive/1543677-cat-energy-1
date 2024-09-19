@@ -82,6 +82,10 @@
     }
   }
 
+  &__input:focus ~ .looks__circle {
+    border-color: rgba(@soft_grey, 0.5);
+    box-shadow: 0 0 0 2px @soft_grey;
+  }
   &__input:disabled ~ .looks__circle::before {
     background-color: fade(@basic_green, 30%);
   }
